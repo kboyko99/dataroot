@@ -4,14 +4,30 @@ html, body{
   margin: 0;
   background: $grey-background;
 }
+.main-container{
+  width: 80%;
+  margin: 0 auto;
+}
+.three-dots{
+  vertical-align: middle;
+}
+.card-container{
+  background-color: white;
+  width: 96%;
+  padding: 2%;
+  margin: 2% 0;
+}
+img{
+  width: 100%;
+  height: auto;
+}
 header {
-  //TODO: gradient background color
-  background: $green;
-  margin-top: 15px;
+  margin-top: 20px;
+  background: url("../img/homepage.png") no-repeat;
+  background-size: cover;
+  height: 405px;
+
   .main-container {
-    background: url("../img/homepage.png") no-repeat;
-    background-size: cover;
-    height: 330px;
     color: white;
     nav{
       padding: 2% 0;
@@ -31,6 +47,10 @@ header {
       }
       .logo{
         width: 6%;
+        img{
+          width: auto;
+          height: auto;
+        }
       }
       .add-ad{
         padding: 1%;
@@ -106,21 +126,4 @@ main{
       width: 30%;
     }
   }
-}
-.main-container{
-  width: 80%;
-  margin: 0 auto;
-}
-.three-dots{
-  vertical-align: middle;
-}
-.card-container{
-  background-color: white;
-  width: 96%;
-  padding: 2%;
-  margin: 2% 0;
-}
-img{
-  width: 100%;
-  height: auto;
 }

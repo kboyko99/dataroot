@@ -2,13 +2,29 @@ html, body {
   margin: 0;
   background: #5A6872; }
 
+.main-container {
+  width: 80%;
+  margin: 0 auto; }
+
+.three-dots {
+  vertical-align: middle; }
+
+.card-container {
+  background-color: white;
+  width: 96%;
+  padding: 2%;
+  margin: 2% 0; }
+
+img {
+  width: 100%;
+  height: auto; }
+
 header {
-  background: #00a661;
-  margin-top: 15px; }
+  margin-top: 20px;
+  background: url("../img/homepage.png") no-repeat;
+  background-size: cover;
+  height: 405px; }
   header .main-container {
-    background: url("../img/homepage.png") no-repeat;
-    background-size: cover;
-    height: 330px;
     color: white; }
     header .main-container nav {
       padding: 2% 0; }
@@ -25,6 +41,9 @@ header {
             border-bottom: 3px solid white; }
       header .main-container nav .logo {
         width: 6%; }
+        header .main-container nav .logo img {
+          width: auto;
+          height: auto; }
       header .main-container nav .add-ad {
         padding: 1%;
         width: 20%;
@@ -78,20 +97,3 @@ main #subway div {
 
 main #subway .room-type {
   width: 30%; }
-
-.main-container {
-  width: 80%;
-  margin: 0 auto; }
-
-.three-dots {
-  vertical-align: middle; }
-
-.card-container {
-  background-color: white;
-  width: 96%;
-  padding: 2%;
-  margin: 2% 0; }
-
-img {
-  width: 100%;
-  height: auto; }

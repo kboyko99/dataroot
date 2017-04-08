@@ -1,0 +1,97 @@
+html, body {
+  margin: 0;
+  background: #5A6872; }
+
+header {
+  background: #00a661;
+  margin-top: 15px; }
+  header .main-container {
+    background: url("../img/homepage.png") no-repeat;
+    background-size: cover;
+    height: 330px;
+    color: white; }
+    header .main-container nav {
+      padding: 2% 0; }
+      header .main-container nav .nav-link {
+        display: inline-block;
+        width: 10%;
+        color: white;
+        vertical-align: middle; }
+        header .main-container nav .nav-link a {
+          color: white;
+          text-decoration: none;
+          padding-bottom: 2%; }
+          header .main-container nav .nav-link a.active {
+            border-bottom: 3px solid white; }
+      header .main-container nav .logo {
+        width: 6%; }
+      header .main-container nav .add-ad {
+        padding: 1%;
+        width: 20%;
+        background: rgba(255, 255, 255, 0.1);
+        display: inline-block;
+        cursor: pointer; }
+        header .main-container nav .add-ad i {
+          padding-right: 5%; }
+      header .main-container nav .log-in {
+        padding: 1%;
+        display: inline-block; }
+    header .main-container h2 {
+      margin-top: 5%; }
+    header .main-container .filters {
+      width: 100%; }
+      header .main-container .filters div {
+        display: inline-block;
+        width: 33%; }
+        header .main-container .filters div span {
+          display: block;
+          margin: 2% 0; }
+      header .main-container .filters .choose-city select {
+        width: 96%;
+        padding: 2%; }
+      header .main-container .filters .choose-rooms {
+        margin: 0 3%; }
+        header .main-container .filters .choose-rooms input {
+          display: none; }
+        header .main-container .filters .choose-rooms label {
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          padding: 1% 3%;
+          border: 2px solid white;
+          margin: 1%;
+          cursor: pointer; }
+        header .main-container .filters .choose-rooms label:last-child {
+          padding: 1% 1.7%; }
+      header .main-container .filters .search-button {
+        background-color: white;
+        padding: 1% 4%;
+        border: none;
+        color: #00a661;
+        font-size: 17px;
+        cursor: pointer; }
+
+main #subway div {
+  width: 49%;
+  display: inline-block;
+  vertical-align: top; }
+
+main #subway .room-type {
+  width: 30%; }
+
+.main-container {
+  width: 80%;
+  margin: 0 auto; }
+
+.three-dots {
+  vertical-align: middle; }
+
+.card-container {
+  background-color: white;
+  width: 96%;
+  padding: 2%;
+  margin: 2% 0; }
+
+img {
+  width: 100%;
+  height: auto; }

@@ -144,7 +144,8 @@ main .offers {
   margin-bottom: 5%; }
   main .offers .offer {
     display: inline-block;
-    width: 23.9%;
+    width: 23%;
+    vertical-align: top;
     margin-right: 1%; }
     main .offers .offer .room-img {
       position: relative; }

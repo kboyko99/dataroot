@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">    <link rel="stylesheet" href="css/style.css">
     <title>Metrovka</title>
 </head>
 <body>
@@ -15,11 +15,11 @@
             <div class="nav-link"><a href="">Продажа</a></div>
             <div class="nav-link"><a href="">Посуточно</a></div>
             <div class="nav-link dropdown"><i class="fa fa-ellipsis-h" aria-hidden="true"></i>Ещё</div>
-            <div class="nav-link"></div><div class="nav-link"></div>
-            <div class="add-ad"><i class="fa fa-plus-circle" aria-hidden="true"></i>Разместить объявление</div>
-            <div class="log-in">Войти</div>
+            <div class="nav-link"></div>
+            <div class="add-ad nav-link"><i class="fa fa-plus-circle" aria-hidden="true"></i>Разместить объявление</div>
+            <div class="log-in nav-link">Войти</div>
         </nav>
-        <h2>Поиск недвижимости в Украине</h2>
+        <h1>Поиск недвижимости в Украине</h1>
         <div class="filters">
             <div class="choose-city">
                 <span>Выберите город</span>
@@ -66,11 +66,11 @@
     <div class="main-container">
         <div id="subway" class="card-container">
             <div class="subway-search">
-                <h3>Недвижимость возле метро</h3>
+                <h2>Недвижимость возле метро</h2>
                 <nav>
-                    <div class="room-type"><a href="">Квартиры</a></div>
-                    <div class="room-type"><a href="">Дома</a></div>
-                    <div class="room-type"><a href="">Оффисы</a></div>
+                    <div class="nav-link active"><a href="">Квартиры</a></div>
+                    <div class="nav-link"><a href="">Дома</a></div>
+                    <div class="nav-link"><a href="">Оффисы</a></div>
                 </nav>
                 <select name="" id="station">
                     <option value="">Политехнический институт</option>
@@ -85,12 +85,12 @@
                     <option value=""></option>
     
                 </select>
-                <button class="subway-search__button">Показать результаты поиска</button>
+                <button class="go-button">Показать результаты поиска</button>
             </div>
             <div class="subway-img"><img src="img/metro.png" alt=""></div>
         </div>
         <div id="best-offers" class="card-container">
-            <h3>Лучшие предложения в Киеве</h3>
+            <h2>Лучшие предложения в Киеве</h2>
             <div class="offers">
                 <div class="offer">
                     <div class="room-img">
@@ -137,19 +137,20 @@
                     </div>
                 </div>
             </div>
+            <hr>
             <a href="" class="more-offers">Смотреть лучшие ценовые предложения</a>
         </div>
         <div id="latest-offers" class="card-container">
-            <h3>Последние объявления в Киеве</h3>
+            <h2>Последние объявления в Киеве</h2>
             <nav>
-                <div class="latest-filter">Квартиры</div>
-                <div class="latest-filter">Дома</div>
-                <div class="latest-filter">Оффисы</div>
+                <div class="nav-link active">Квартиры</div>
+                <div class="nav-link">Дома</div>
+                <div class="nav-link">Оффисы</div>
             </nav>
             <div class="offers">
                 <div class="offer">
                     <div class="room-img">
-                        <img src="img/best-room.png" alt="">
+                        <img src="img/latest-1.png" alt="">
                         <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
                     </div>
                     <div class="info">
@@ -160,7 +161,7 @@
                 </div>
                 <div class="offer">
                     <div class="room-img">
-                        <img src="img/best-room.png" alt="">
+                        <img src="img/latest-2.png" alt="">
                         <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
                     </div>
                     <div class="info">
@@ -171,11 +172,11 @@
                 </div>
                 <div class="offer">
                     <div class="room-img">
-                        <img src="img/best-room.png" alt="">
+                        <img src="img/latest-3.png" alt="">
                         <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
                     </div>
                     <div class="info">
-                        <div class="price">11 800 грн <i class="fa fa-check-circle" aria-hidden="true"></i></div>
+                        <div class="price">11 800 грн <i class="fa fa-check-circle" aria-hidden="true"></i> <i class="fa fa-check-circle" aria-hidden="true"></i></div>
                         <div class="size">1 комн - 30 кв.м.</div>
                         <div class="station">Контрактовая площадь</div>
                     </div>
@@ -192,26 +193,27 @@
                     </div>
                 </div>
             </div>
-            <a href="" class="more-offers">Смотреть лучшие ценовые предложения</a>
+            <hr>
+            <a href="" class="more-offers">Смотреть самые свежие объявления</a>
         </div>
         <div id="telegram">
-            <h3>Общайтесь в Telegram</h3>
+            <h2>Общайтесь в Telegram</h2>
             <p>Не отвлекайтесь больше на формальности. Получайте моментальные уведомления о новых обьявлениях, общайтесь без ограничений. </p>
             <nav>
-                <div class="tg-filter">Поиск недвижимости</div>
-                <div class="tg-filter">Общение с клиентами</div>
+                <div class="nav-link active">Поиск недвижимости</div>
+                <div class="nav-link">Общение с клиентами</div>
             </nav>
             <div id="tg-search">
                 <div id="iphone-holder"><img src="img/iphone.png" alt=""></div>
                 <div id="tg-info" class="card-container">
                     <div class="tg-logo"><img src="img/tg-logo.png" alt=""></div>
-                    <h4>Metrovka Bot</h4>
+                    <h3>Metrovka Bot</h3>
                     <ol>
                         <li>Собирайте аналитику по объектам</li>
                         <li>Получайте подсказки по эффективному продвижению объявлений</li>
                         <li>Общайтесь с клиентами через специальный канал телекоммуникации</li>
                     </ol>
-                    <button class="join-tg"><a href="">Присоедениться в Telegram</a></button>
+                    <a class="go-button" href="">Присоедениться в Telegram</a>
                 </div>
             </div>
             <div id="tg-communication" class="hidden">
@@ -219,67 +221,70 @@
             <nav></nav>
         </div>
         <div id="blog" class="card-container">
-            <h3>Блог Metrovka</h3>
+            <h2>Блог Metrovka</h2>
             <p>Хитрости, приемы, советы, фото и видео – все о том как продать, купить, сдать в аренду или арендовать недвижимость.</p>
             <div class="posts">
                 <div class="post">
-                    <img src="" alt="">
-                    <div class="category">ЛАЙФХАК</div>
+                    <img src="img/blog-1.png" alt="">
+                    <div class="category lifehack">ЛАЙФХАК</div>
                     <div class="post-title">Киевляне могут оплатить коммуналку через Facebook…</div>
                     <div class="additional-info">Татьяна Малыняк, 5 мин чтения</div>
                 </div>
                 <div class="post">
-                    <img src="" alt="">
-                    <div class="category">Совет Metrovka</div>
+                    <img src="img/blog-2.png" alt="">
+                    <div class="category advice">Совет Metrovka</div>
                     <div class="post-title">ТОП-5 самых дешевых квартир Киева</div>
                     <div class="additional-info">Татьяна Малыняк, 4 мин чтения</div>
                 </div>
                 <div class="post">
-                    <img src="" alt="">
-                    <div class="category">Технологии</div>
+                    <img src="img/blog-3.png" alt="">
+                    <div class="category technologies">Технологии</div>
                     <div class="post-title">Смарт квартиры: цены, предложения и законность</div>
                     <div class="additional-info">Татьяна Малыняк, 2 мин чтения</div>
                 </div>
             </div>
+            <hr>
             <a href="" class="more-offers">Перейти на страницу блога</a>
         </div>
     </div>
 </main>
 <footer>
-    <div class="footer-info">
-        <h4>Metrovka</h4>
-        <div class="footer-link"><a href="">О компании</a></div>
-        <div class="footer-link"><a href="">Пресса о нас</a></div>
-        <div class="footer-link"><a href="">Пользовательское соглашение</a></div>
-        <div class="footer-link"><a href="">Карта сайта</a></div>
-        <div class="footer-link"><a href="">Помощь</a></div>
-    </div>
-    <div class="footer-info">
-        <h4>Партнерство</h4>
-        <div class="footer-link"><a href="">Как разместить объявление</a></div>
-        <div class="footer-link"><a href="">Инструменты продвижения</a></div>
-        <div class="footer-link"><a href="">Правила заполнения объявлений</a></div>
-    </div>
-    <div class="footer-info">
-        <h4>Узнайте больше</h4>
-        <div class="footer-link"><a href="">Бонусная программа Bonus+</a></div>
-        <div class="footer-link"><a href="">Telegram Metrovka Bot</a></div>
-        <div class="footer-link"><a href="">Как работает поиск</a></div>
-        <div class="footer-link"><a href="">Как пользоваться избранным</a></div>
-    </div>
-    <div class="footer-info">
-        <h4>Контакты</h4>
-        <div class="social-icons">
-            <div class="social-icon"><i class="fa fa-facebook-official" aria-hidden="true"></i></div>
-            <div class="social-icon"><i class="fa fa-vk" aria-hidden="true"></i></div>
-            <div class="social-icon"><i class="fa fa-instagram" aria-hidden="true"></i></div>
+    <div class="main-container">
+        <div class="footer-info">
+            <h4>Metrovka</h4>
+            <div class="footer-link"><a href="">О компании</a></div>
+            <div class="footer-link"><a href="">Пресса о нас</a></div>
+            <div class="footer-link"><a href="">Пользовательское соглашение</a></div>
+            <div class="footer-link"><a href="">Карта сайта</a></div>
+            <div class="footer-link"><a href="">Помощь</a></div>
         </div>
-        <div class="adress">ул. Жилянская, 37
-        Киев, 01033</div>
-        <div class="email">info@metrovka.ua</div>
-        <button class="apply">Оставить заявку</button>
+        <div class="footer-info">
+            <h4>Партнерство</h4>
+            <div class="footer-link"><a href="">Как разместить объявление</a></div>
+            <div class="footer-link"><a href="">Инструменты продвижения</a></div>
+            <div class="footer-link"><a href="">Правила заполнения объявлений</a></div>
+        </div>
+        <div class="footer-info">
+            <h4>Узнайте больше</h4>
+            <div class="footer-link"><a href="">Бонусная программа Bonus+</a></div>
+            <div class="footer-link"><a href="">Telegram Metrovka Bot</a></div>
+            <div class="footer-link"><a href="">Как работает поиск</a></div>
+            <div class="footer-link"><a href="">Как пользоваться избранным</a></div>
+        </div>
+        <div class="footer-info">
+            <h4>Контакты</h4>
+            <div class="social-icons">
+                <div class="social-icon"><i class="fa fa-facebook-official" aria-hidden="true"></i></div>
+                <div class="social-icon"><i class="fa fa-vk" aria-hidden="true"></i></div>
+                <div class="social-icon"><i class="fa fa-instagram" aria-hidden="true"></i></div>
+            </div>
+            <div class="footer-link">ул. Жилянская, 37
+            Киев, 01033</div>
+            <div class="footer-link">info@metrovka.ua</div>
+            <button class="go-button">Оставить заявку</button>
+        </div>
+        <div class="footer-logo"><img src="img/f-logo.png" alt=""></div>
     </div>
-    <div class="footer-logo"><img src="img/f-logo.png" alt=""></div>
 </footer>
 </body>
 </html>

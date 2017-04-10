@@ -254,3 +254,6 @@ footer .footer-logo {
 
 .technologies {
   color: #0086B3; }
+
+.button:hover {
+  background: red; }

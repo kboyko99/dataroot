@@ -16,42 +16,22 @@
             <div class="nav-link"><a href="">Продажа</a></div>
             <div class="nav-link"><a href="">Посуточно</a></div>
             <div class="nav-link dropdown"><i class="fa fa-ellipsis-h" aria-hidden="true"></i>Ещё</div>
-            <div class="nav-link"></div>
             <div class="add-ad nav-link"><i class="fa fa-plus-circle" aria-hidden="true"></i>Разместить объявление</div>
             <div class="log-in nav-link">Войти</div>
         </nav>
         <h1>Поиск недвижимости в Украине</h1>
         <div class="filters">
-            <div class="choose-city">
+            <div class="select_holder">
                 <span>Выберите город</span>
-                <select name="" id="" class="city">
-                    <option value="kiev">Киев</option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                </select>
+                <div name="" id="" class="city select">
+                    <span>Киев <i class="fa fa-sort-desc" aria-hidden="true"></i></span>
+                    <ul>
+                        <li>Киев</li>
+                        <li>Не Киев</li>
+                    </ul>
+                </div>
             </div>
-            <div class="choose-rooms">
+            <div class="checkbox_holder">
                 <span>Количество комнат</span>
                 <input type="checkbox" id="rooms-1"><label for="rooms-1">1</label>
                 <input type="checkbox" id="rooms-2"><label for="rooms-2">2</label>
@@ -73,19 +53,14 @@
                     <div class="nav-link"><a href="">Дома</a></div>
                     <div class="nav-link"><a href="">Оффисы</a></div>
                 </nav>
-                <select name="" id="station">
-                    <option value="">Политехнический институт</option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
+                <div id="station" class="select">
+                    <span>Политехнический институт <i class="fa fa-sort-desc" aria-hidden="true"></i></span>
+                    <ul>
+                        <li value="">Политехнический институт</li>
+                        <li value=""></li>
+                    </ul>
     
-                </select>
+                </div>
                 <button class="go-button">Показать результаты поиска</button>
             </div>
             <div class="subway-img"><img src="img/metro.png" alt=""></div>

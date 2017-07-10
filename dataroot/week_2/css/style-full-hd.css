@@ -1,0 +1,320 @@
+html, body {
+  margin: 0;
+  background: #5A6872;
+  font-family: 'Roboto', sans-serif; }
+
+.main-container {
+  width: 80%;
+  margin: 0 auto; }
+  .main-container h1, .main-container h2, .main-container h3 {
+    font-weight: 400; }
+
+.three-dots {
+  vertical-align: middle; }
+
+.card-container {
+  background-color: white;
+  width: 96%;
+  padding: 2%;
+  margin: 2% 0; }
+
+.select {
+  cursor: pointer;
+  width: 94%;
+  margin: 0;
+  font-size: 20px;
+  border-radius: 3px;
+  background-color: white;
+  color: black;
+  border: 3px solid lightgrey; }
+  .select span {
+    padding: 1% 3%; }
+  .select i {
+    float: right;
+    color: #00a661; }
+  .select ::-webkit-scrollbar {
+    display: none; }
+  .select span {
+    display: block;
+    margin: 2% 0 4%; }
+  .select ul {
+    display: none;
+    z-index: 99;
+    list-style-type: none; }
+  .select:hover {
+    border: 3px solid #00a661;
+    transition: border;
+    transition-duration: 0.2s; }
+    .select:hover ul {
+      display: block;
+      padding: 0; }
+      .select:hover ul li {
+        padding: 2%;
+        background-color: white;
+        color: black;
+        transition: background-color, color;
+        transition-duration: 0.25s; }
+      .select:hover ul li:hover {
+        background-color: #00a661;
+        color: white;
+        transition: background-color, color;
+        transition-duration: 0.25s; }
+
+img {
+  width: 100%;
+  height: auto; }
+
+.nav-link {
+  display: inline-block;
+  padding: 10px 0;
+  margin: 0 2%; }
+
+.go-button {
+  width: 92%;
+  padding: 4%;
+  margin-top: 10%;
+  background-color: #00a661;
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  border: none; }
+
+header {
+  margin-top: 20px;
+  background: url("../img/homepage.png") no-repeat;
+  background-size: cover;
+  height: 525px; }
+  header .main-container {
+    color: white; }
+    header .main-container nav {
+      padding: 2% 0; }
+      header .main-container nav .nav-link {
+        width: 6%;
+        color: white;
+        vertical-align: middle; }
+        header .main-container nav .nav-link.dropdown {
+          width: 16%; }
+          header .main-container nav .nav-link.dropdown i {
+            font-size: 30px;
+            margin: 0 10% 0 20%;
+            vertical-align: inherit; }
+        header .main-container nav .nav-link a {
+          color: white;
+          text-decoration: none;
+          padding-bottom: 10%; }
+          header .main-container nav .nav-link a.active {
+            border-bottom: 3px solid white; }
+      header .main-container nav .logo {
+        width: 3.5%;
+        margin: 0 3% 0 1%; }
+      header .main-container nav .add-ad {
+        padding: 1.1% 1.5%;
+        width: 22%;
+        background: rgba(255, 255, 255, 0.1);
+        display: inline-block;
+        cursor: pointer;
+        margin-left: 7%; }
+        header .main-container nav .add-ad i {
+          padding-right: 5%;
+          font-size: 25px; }
+      header .main-container nav .log-in {
+        padding: 1% 0;
+        display: inline-block;
+        float: right;
+        margin: 1% 0; }
+    header .main-container h1 {
+      margin-top: 5%;
+      font-weight: 400; }
+    header .main-container .filters {
+      width: 100%; }
+      header .main-container .filters div {
+        display: inline-block;
+        margin: 0 0.5%;
+        vertical-align: top; }
+        header .main-container .filters div span {
+          display: block;
+          margin: 2% 0 4%; }
+      header .main-container .filters .select_holder {
+        width: 38%; }
+      header .main-container .filters .checkbox_holder {
+        width: 30%;
+        margin: 0 3%; }
+        header .main-container .filters .checkbox_holder input {
+          display: none; }
+        header .main-container .filters .checkbox_holder label {
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          padding: 4.4% 5.1%;
+          text-align: center;
+          display: inline-block;
+          border: 2px solid white;
+          margin: 0.8%;
+          cursor: pointer;
+          transition-duration: 0.5s;
+          transition: background-color, color; }
+        header .main-container .filters .checkbox_holder label:last-child {
+          padding: 4.4% 4.7%; }
+        header .main-container .filters .checkbox_holder input[type="checkbox"]:checked + label {
+          background-color: white;
+          color: #00a661;
+          transition-duration: 0.5s;
+          transition: background-color, color; }
+      header .main-container .filters .search-button {
+        background-color: white;
+        padding: 1.5% 4.7%;
+        border: none;
+        float: right;
+        color: #00a661;
+        margin-top: 4%;
+        font-size: 19px;
+        cursor: pointer;
+        margin-right: 1%; }
+
+main h2 {
+  text-align: center; }
+
+main #subway .subway-search {
+  display: inline-block;
+  width: 40%; }
+  main #subway .subway-search h2 {
+    text-align: left; }
+  main #subway .subway-search nav {
+    margin: 2% 0; }
+    main #subway .subway-search nav .nav-link {
+      width: auto;
+      padding: 10px; }
+      main #subway .subway-search nav .nav-link a {
+        color: #000;
+        text-decoration: none;
+        padding: 5px; }
+
+main #subway .subway-img {
+  width: 40%;
+  display: inline-block;
+  margin: 2% 6%;
+  float: right; }
+
+main .offers {
+  margin-bottom: 5%; }
+  main .offers .offer {
+    display: inline-block;
+    width: 23%;
+    vertical-align: top;
+    margin-right: 1%; }
+    main .offers .offer .room-img {
+      position: relative; }
+      main .offers .offer .room-img i {
+        cursor: pointer;
+        position: absolute;
+        top: 21px;
+        right: 20px;
+        color: white;
+        font-size: 32px; }
+    main .offers .offer .price i {
+      color: #00a661;
+      float: right; }
+  main .offers .offer:last-child {
+    margin: 0; }
+
+main a.more-offers {
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  margin: 0;
+  color: black; }
+
+main #latest-offers nav {
+  margin: 3% auto;
+  width: 30%; }
+  main #latest-offers nav .nav-link {
+    margin: 0 auto;
+    padding: 2% 0;
+    width: 32%;
+    text-align: center;
+    cursor: pointer; }
+
+main .active {
+  border-bottom: 3px solid #00a661; }
+
+main p {
+  width: 55%;
+  text-align: center;
+  margin: 0 auto; }
+
+main #telegram {
+  margin: 5% 0; }
+  main #telegram nav {
+    width: 45%;
+    margin: 3% auto; }
+    main #telegram nav .nav-link {
+      text-align: center;
+      width: 49%; }
+  main #telegram #tg-search #iphone-holder {
+    display: inline-block;
+    margin-left: 20%; }
+  main #telegram #tg-search #tg-info {
+    display: inline-block;
+    width: 35%;
+    padding: 5%;
+    float: right; }
+    main #telegram #tg-search #tg-info .tg-logo {
+      width: 45%; }
+
+main #blog .posts .post {
+  display: inline-block;
+  width: 30%;
+  margin: 4% 1.5%; }
+  main #blog .posts .post .category {
+    margin: 2% 0;
+    text-transform: uppercase;
+    font-size: 16px; }
+  main #blog .posts .post .additional-info {
+    color: grey;
+    font-size: 16px;
+    margin: 4% 0; }
+
+main #blog .posts .post:last-child {
+  margin-right: 1%; }
+
+main #blog .posts .post:first-child {
+  margin-left: 1%; }
+
+footer .footer-info {
+  display: inline-block;
+  width: 20%;
+  vertical-align: top;
+  margin: 0 2%; }
+  footer .footer-info a {
+    color: #000;
+    text-decoration: none; }
+  footer .footer-info .social-icon {
+    display: inline-block;
+    margin: 0 2%;
+    font-size: 25px; }
+  footer .footer-info .footer-link {
+    margin: 10% 0; }
+  footer .footer-info .go-button {
+    padding: 5% 3%; }
+
+footer .footer-logo {
+  width: 5%;
+  margin: 0 auto; }
+
+.lifehack {
+  color: purple; }
+
+.advice {
+  color: green; }
+
+.technologies {
+  color: #0086B3; }
+
+.button:hover {
+  background: red; }
+
+.fa-circle {
+  color: red;
+  position: relative; }

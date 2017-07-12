@@ -73,7 +73,7 @@ $color-black: #0d0d0e !default;
 $color-darkgray: #313439 !default;
 $color-midgray: #676b72 !default;
 $color-gray: #bdbdbd !default;
-$color-lightgray: #d4d4d4 !default;
+$color-lightgray: #eff0f4 !default;
 $color-silver: #e0e1e1 !default;
 $color-aluminum: #f8f8f8 !default;
 
@@ -210,10 +210,10 @@ $input-textarea-padding-tb: 8px !default;
 // States
 $input-border-width: 1px !default;
 $input-border-color: $color-lightgray !default;
-$input-background-color: #fff !default;
+$input-background-color: $color-lightgray !default;
 $input-box-shadow: none !default;
 
-$input-focus-background-color: #fff !default;
+$input-focus-background-color: $color-lightgray !default;
 $input-focus-border-color: $color-focus !default;
 $input-focus-box-shadow: 0 0 1px $color-focus inset !default;
 
@@ -229,7 +229,7 @@ $input-disabled-opacity: .6;
 $input-disabled-color: rgba(0, 0, 0, .5);
 
 // Radius
-$input-border-radius: 3px !default;
+$input-border-radius: 10px !default;
 
 
 // OVERLAY

@@ -121,7 +121,7 @@ Vue.component('portfolio-lernen', {
    <div id="portfolio-lernen-card" class="row col col-12 align-center">
         <div class="card-container col col-12 row align-center">
         <h4>Ihr persönlicher Portfoliomix im Detail</h4>
-            <div class="col col-3 row align-center" v-for="pm in $root.portfoliomixes">
+            <div class="col col-3 row align-center pm" v-for="pm in $root.portfoliomixes">
                 <div class="col col-11 row">
                     <p class="pm_value"><span class="label badge custom outline primary">{{pm.value}}</span> </p>
                     <h5 class="pm_name">{{pm.name}}</h5>
@@ -165,27 +165,30 @@ Vue.component('portfolio-senden', {
     template:`
    <div id="portfolio-senden-card" v-if="$root.selected.id=='portfolio_senden'" class="row col col-12 ">
            <div class="card-container col col-12 row align-center">
-                <div class="col col-9">
+                <div class="col col-9 row">
                     <h4>Portfolio zusenden</h4>
                     <form method="post" action="" class="form col col-6 row">
                         <div class="form-item col col-12">
-                            <label for="name">Name</label>
+                            <label for="name" class="upper">Name</label>
                             <input id="name" type="text" name="name" class="col col-12">
                         </div>
                         <div class="form-item col col-12">
-                            <label for="tel">telefonnumber</label>
+                            <label for="tel" class="upper">telefonnumber</label>
                             <input id="tel" type="text" name="name" class="col col-12">
                         </div>
                         <div class="form-item col col-12">
-                            <label for="email">email adresse</label>
+                            <label for="email" class="upper">email adresse</label>
                             <input id="email" type="text" name="name" class="col col-12">
                         </div>
                         <div class="form-item col col-12">
                             <input required type="checkbox" id="confirm">
                             <label class="checkbox small" for="confirm">Ich bin mit den Datenschutzbestimmungen einverstanden und stimme einem Anruf durch ICM InvestmentBank AG zu.</label>
                         </div>
-                        <button>ANFRAGE ABSENDEN</button>
+                        <button class="button round">ANFRAGE ABSENDEN</button>
                     </form>
+                    <div class="col col-6">
+                        <img src="img/graphic_portfolio_senden.png" alt="">
+                    </div>
                 </div>
            </div>
     </div> 

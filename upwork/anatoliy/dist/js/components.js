@@ -11,7 +11,7 @@ Vue.component('top-navigation', {
             <span>{{$root.options[0].title}}</span>
             <input type="radio" :value="$root.options[0].id" :id="$root.options[0].id"   name="sidebar-option"></label>
         </div>
-        <div class="nav-buttons col col-6 float-right">
+        <div class="nav-buttons col col-7 float-right row align-center">
             <button class="round button" v-on:click="$root.select($root.options[7])">termin verienbaren</button>
             <button class="round button" v-on:click="$root.select($root.options[6])">portfolio zuseden</button>
             <button class="round button" v-on:click="$root.select($root.options[8])">kontaktdaten ubrmitteln</button>
@@ -89,7 +89,7 @@ Vue.component('dashboard', {
             </div>
             <div class="w30 row">
                 <div class="col col-12 row">
-                    <div class="card-container col col-12 row align-center">
+                    <div class="card-container col col-12 row align-center" id="portfoliomix">
                         <h4>Portfoliomix</h4>
                         <img src="img/portfoliomix.png" alt="">
                         <zoom :select="$root.options[3]" text="Details"></zoom>
@@ -125,8 +125,8 @@ Vue.component('portfolio-lernen', {
                 <div class="col col-11 row">
                     <p class="pm_value"><span class="label badge custom outline primary">{{pm.value}}</span> </p>
                     <h5 class="pm_name">{{pm.name}}</h5>
-                    <p class="pm_data">{{pm.data}}</p>
-                    <button class="outline button primary" v-on:click="$root.view_details=pm">Sie wollen wissen, welche Strategie und Papiere dahinter stecken? Hier Details ansehen lassen</button>
+                    <p class="pm_data small">{{pm.data}}</p>
+                    <button class="outline button primary small" v-on:click="$root.view_details=pm">Sie wollen wissen, welche Strategie und Papiere dahinter stecken? Hier Details ansehen lassen</button>
                 </div>
             </div>
         <div class="col col-12"></div>
@@ -143,7 +143,7 @@ Vue.component('performance', {
     <div id="performance-card" class="row col col-12 align-center card-container">
         <h4>Portfolioperformance</h4>
         <div class="col col-12"><img src="img/tmpl_performance.png" alt=""></div>
-        <helpers v-if="!selected" :set="2"></helpers>
+        <helpers v-if="!selected" :set="3"></helpers>
     </div> 
     `
 });
@@ -163,10 +163,31 @@ props: ['selected'],
 });
 Vue.component('portfolio-senden', {
     template:`
-   <div id="portfolio-senden-card" v-if="$root.selected.id=='portfolio_senden'" class="row col col-12  align-center">
-           <div class="card-container col col-12 row">
-                containers + form + "thanks for your form"
-            </div>
+   <div id="portfolio-senden-card" v-if="$root.selected.id=='portfolio_senden'" class="row col col-12 ">
+           <div class="card-container col col-12 row align-center">
+                <div class="col col-9">
+                    <h4>Portfolio zusenden</h4>
+                    <form method="post" action="" class="form col col-6 row">
+                        <div class="form-item col col-12">
+                            <label for="name">Name</label>
+                            <input id="name" type="text" name="name" class="col col-12">
+                        </div>
+                        <div class="form-item col col-12">
+                            <label for="tel">telefonnumber</label>
+                            <input id="tel" type="text" name="name" class="col col-12">
+                        </div>
+                        <div class="form-item col col-12">
+                            <label for="email">email adresse</label>
+                            <input id="email" type="text" name="name" class="col col-12">
+                        </div>
+                        <div class="form-item col col-12">
+                            <input required type="checkbox" id="confirm">
+                            <label class="checkbox small" for="confirm">Ich bin mit den Datenschutzbestimmungen einverstanden und stimme einem Anruf durch ICM InvestmentBank AG zu.</label>
+                        </div>
+                        <button>ANFRAGE ABSENDEN</button>
+                    </form>
+                </div>
+           </div>
     </div> 
     `
 });

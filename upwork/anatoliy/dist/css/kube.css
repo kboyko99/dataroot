@@ -2174,7 +2174,7 @@ body {
   height: 91vh;
   overflow: scroll; }
 
-input[type=radio] {
+#sidebar input[type=radio], #top-navigation input[type=radio] {
   display: none; }
 
 .label.custom {
@@ -2309,7 +2309,6 @@ h4 {
 #helpers {
   position: absolute;
   bottom: 10px;
-  width: 50%;
   left: 25%; }
 
 .col {
@@ -2363,3 +2362,6 @@ button.inverted {
 .pm_value {
   display: block;
   margin: 0 auto; }
+
+#portfoliomix img {
+  height: 55%; }

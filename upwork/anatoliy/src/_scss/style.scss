@@ -15,8 +15,10 @@ body{
   overflow: scroll;
 }
 
-input[type=radio]{
-  display: none;
+#sidebar, #top-navigation {
+  input[type=radio] {
+    display: none;
+  }
 }
 
 .label.custom{
@@ -177,7 +179,6 @@ h4{
 #helpers{
   position: absolute;
   bottom: 10px;
-  width: 50%;
   left: 25%;
 }
 .col{
@@ -226,6 +227,7 @@ button.inverted{
   text-align: center;
   height: 35vh;
 }
+
 .pm_name{
   display: block;
   text-transform: uppercase;
@@ -236,4 +238,10 @@ button.inverted{
 .pm_value{
   display: block;
   margin: 0 auto;
+}
+#portfolio-senden-card label{
+  //text-transform: uppercase;
+}
+#portfoliomix img{
+  height: 55%;
 }

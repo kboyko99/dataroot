@@ -989,7 +989,10 @@ button,
   line-height: 20px;
   border: 1px solid transparent;
   vertical-align: middle;
-  -webkit-appearance: none; }
+  -webkit-appearance: none;
+  -webkit-box-shadow: 0 10px 40px -5px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 10px 40px -5px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 10px 40px -5px rgba(0, 0, 0, 0.4); }
   button i,
   .button i {
     position: relative;
@@ -2228,7 +2231,10 @@ body {
     padding: 0.9em 0; }
     #top-navigation-parent #top-navigation .nav-buttons button {
       text-transform: uppercase;
-      margin: 0 0.5em; }
+      margin: 0 0.5em;
+      -webkit-box-shadow: none !important;
+      -moz-box-shadow: none !important;
+      box-shadow: none !important; }
   #top-navigation-parent #top-navigation .selected {
     background-color: #ea6d28;
     transition-property: background-color;
@@ -2299,7 +2305,8 @@ h4 {
   width: 90%;
   position: relative;
   height: 1.6em;
-  margin-top: 0.75em; }
+  margin-top: 0.75em !important;
+  margin-bottom: 0; }
   h4:after {
     content: '';
     width: 55px;
@@ -2340,7 +2347,7 @@ button.inverted {
   margin: 0 auto;
   display: block; }
 
-#kennzahlen h4, #kennzahlen h6, #kennzahlen p {
+#kennzahlen h6, #kennzahlen p {
   margin: 0; }
 
 #kennzahlen p {
@@ -2399,3 +2406,9 @@ label[for=confirm] {
 @media (max-width: 1400px) {
   .card-container {
     margin-top: 1vh; } }
+
+.term {
+  text-align: center; }
+
+.grey {
+  color: #313439; }

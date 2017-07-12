@@ -125,15 +125,15 @@ Vue.component('portfolio-lernen', {
                 <div class="col col-11 row">
                     <p class="pm_value"><span class="label badge custom outline primary">{{pm.value}}</span> </p>
                     <h5 class="pm_name">{{pm.name}}</h5>
-                    <p class="pm_data small">{{pm.data}}</p>
-                    <button class="outline button primary small" v-on:click="$root.view_details=pm">Sie wollen wissen, welche Strategie und Papiere dahinter stecken? Hier Details ansehen lassen</button>
+                    <p class="pm_data smaller">{{pm.data}}</p>
+                    <button class="outline button primary smaller" v-on:click="$root.view_details=pm">Sie wollen wissen, welche Strategie und Papiere dahinter stecken? Hier Details ansehen lassen</button>
                 </div>
             </div>
         <div class="col col-12"></div>
         <div class="col col-12"></div>
         <div class="col col-12"></div>
-        </div>
         <helpers v-if="!selected" :set="2"></helpers>
+        </div>
     </div> 
     `
 });
@@ -182,9 +182,16 @@ Vue.component('portfolio-senden', {
                         </div>
                         <div class="form-item col col-12">
                             <input required type="checkbox" id="confirm">
-                            <label class="checkbox small" for="confirm">Ich bin mit den Datenschutzbestimmungen einverstanden und stimme einem Anruf durch ICM InvestmentBank AG zu.</label>
+                            <label class="checkbox smaller" for="confirm">Ich bin mit den Datenschutzbestimmungen einverstanden und stimme einem Anruf durch ICM InvestmentBank AG zu.</label>
                         </div>
-                        <button class="button round">ANFRAGE ABSENDEN</button>
+                        <button class="button round" data-component="modal" data-target="#my-modal">ANFRAGE ABSENDEN</button>
+                    <div id="my-modal" class="modal-box hide">
+                        <div class="modal">
+                            <span class="close"></span>
+                            <div class="modal-header">UI Modal</div>
+                            <div class="modal-body">Vielen Dank fur Interesse. Wir melden uns in Kurze mit weiteren interessanten Details bei Ihnen.<br>Ihr ICM-Team</div>
+                        </div>
+                    </div>
                     </form>
                     <div class="col col-6">
                         <img src="img/graphic_portfolio_senden.png" alt="">
@@ -197,7 +204,21 @@ Vue.component('portfolio-senden', {
 Vue.component('termin', {
     template:`
    <div id="termin-card" v-if="$root.selected.id=='termin'" class="row col col-12  align-center">
-              <div class="card-container col col-12 row"></div>
+        <div class="card-container col col-12 row align-center around">
+            <h4>Termin vereinbaren</h4>   
+            <div class="col col-10 row">
+                <div class="term col col-4 row align-center" v-for="t in $root.team">
+                    <div class="col col-8">
+                        <img :src="t.img" alt=""><br>
+                        <span class="small">{{t.name}}</span><br>
+                        <span class="upper smaller grey">{{t.city}}</span><br>
+                        <span class="small">{{t.mail}}</span><br>
+                        <span class="strong small">{{t.tel}}</span><br>
+                        <button class="button outline round">Jetzt anrufen</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div> 
     `
 });

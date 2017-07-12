@@ -76,9 +76,13 @@ body{
     }
     .nav-buttons {
       padding: 0.9em 0;
+
       button{
         text-transform: uppercase;
         margin: 0 0.5em;
+        -webkit-box-shadow: none!important;
+        -moz-box-shadow: none!important;
+        box-shadow: none!important;
       }
     }
     .selected{
@@ -167,7 +171,8 @@ h4{
   width: 90%;
   position: relative;
   height: 1.6em;
-  margin-top: 0.75em;
+  margin-top: 0.75em!important;
+  margin-bottom: 0;
   &:after{
     content: '';
     width: 55px;
@@ -214,7 +219,7 @@ button.inverted{
   }
 }
 #kennzahlen{
-  h4, h6, p{
+  h6, p{
     margin: 0;
   }
   p{
@@ -280,4 +285,10 @@ label[for=confirm]{
   .card-container{
     margin-top: 1vh;
   }
+}
+.term{
+  text-align: center;
+}
+.grey{
+  color: $color_text;
 }

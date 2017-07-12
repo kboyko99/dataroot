@@ -78,6 +78,43 @@ const globals = {
         }
     ],
     view_details: {},
+    team: [
+        {
+            name: 'William Ayrton',
+            img: 'img/team/william.png',
+            tel: '+49 6784 789 7890',
+            mail: 'william.ayrton@myinvest.com',
+            city: 'Nürnberg'
+        },
+        {
+            name: 'William Winter',
+            img: 'img/team/wwilliam.png',
+            tel: '+49 6784 789 7890',
+            mail: 'william.winter@myinvest.com',
+            city: 'Kassel'
+        },
+        {
+            name: 'Mackenzie Livingston',
+            img: 'img/team/mackenzie.png',
+            tel: '+49 6784 789 7890',
+            mail: 'mackenzie@myinvest.com',
+            city: 'Berlin'
+        },
+        {
+            name: 'Jason Barnes',
+            img: 'img/team/jason.png',
+            tel: '+49 6784 789 7890',
+            mail: 'jason.barnes@myinvest.com',
+            city: 'Düsseldorf'
+        },
+        {
+            name: 'Mackenzie Livingston',
+            img: 'img/team/livingston.png',
+            tel: '+49 6784 789 7890',
+            mail: 'livingston@myinvest.com',
+            city: 'Dresden'
+        }
+    ],
     select: function (opt) {
         $('.selected').removeClass('selected');
         $('#' + opt.id).addClass('selected');

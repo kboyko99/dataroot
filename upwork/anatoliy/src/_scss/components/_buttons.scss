@@ -15,7 +15,9 @@ button,
 	border: 1px solid transparent;
 	vertical-align: middle;
 	-webkit-appearance: none;
-
+    -webkit-box-shadow: 0 10px 40px -5px rgba(0, 0, 0, 0.4) ;
+    -moz-box-shadow: 0 10px 40px -5px rgba(0, 0, 0, 0.4) ;
+    box-shadow: 0 10px 40px -5px rgba(0, 0, 0, 0.4) ;
 	& i {
         position: relative;
         top: 1px;

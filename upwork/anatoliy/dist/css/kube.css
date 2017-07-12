@@ -2405,7 +2405,9 @@ label[for=confirm] {
 
 @media (max-width: 1400px) {
   .card-container {
-    margin-top: 1vh; } }
+    margin-top: 1vh; }
+  #portfolio-senden-card .col-9 {
+    margin-top: 3%; } }
 
 .term {
   text-align: center; }

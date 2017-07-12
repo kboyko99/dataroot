@@ -1,5 +1,5 @@
 const globals = {
-    selected: '',
+    selected: {},
     options: [
         {
             title: 'Start',
@@ -27,12 +27,12 @@ const globals = {
         },
         {
             title: 'Perfomance auswerten',
-            id: 'perfomance',
-            img: 'img/perfomance.png',
-            img_hover: 'img/perfomance_hover.png'
+            id: 'performance',
+            img: 'img/performance.png',
+            img_hover: 'img/performance_hover.png'
         },
         {
-            title: 'Risko analysieren',
+            title: 'Risiko analysieren',
             id: 'analysis',
             img: 'img/analysis.png',
             img_hover: 'img/analysis_hover.png'
@@ -56,6 +56,28 @@ const globals = {
             img_hover: 'img/kontakten_hover.png'
         }
     ],
+    portfoliomixes: [
+        {
+            value: 40,
+            name: 'leo t',
+            data: 'Unser aktiv gemanagter und vielfach ausgezeichneter Multi-Asset-Fonds (Aktien, Anleihen, Rohstoffe und Liquidität). Siehe Grafik oben.'
+        },
+        {
+            value: 35,
+            name: 'aktien',
+            data: 'Unser Aktienuniversum wird von unseren ausgewiesenen Aktienspezialisten ständig überprüft und ausgewertet, so können wir jederzeit sofort auf veränderte Marktbedingungen reagieren'
+        },
+        {
+            value: 25,
+            name: 'anleihen',
+            data: 'Wir bieten Ihnen ein aktives Management - auch bei festverzinslichen Anleihen, denn die Zeiten, in denen eine einfache „Sicherheitsanleihe“ im Depot liegen sollte, sind lange passé. Wir kombinieren Ihre Vorgaben zu Zielrendite'
+        },{
+            value: 35,
+            name: 'aktien',
+            data: 'Unser Aktienuniversum wird von unseren ausgewiesenen Aktienspezialisten ständig überprüft und ausgewertet, so können wir jederzeit sofort auf veränderte Marktbedingungen reagieren'
+        }
+    ],
+    view_details: {},
     select: function (opt) {
         $('.selected').removeClass('selected');
         $('#' + opt.id).addClass('selected');

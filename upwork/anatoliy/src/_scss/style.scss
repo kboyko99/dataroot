@@ -1,14 +1,6 @@
-
-input[type=radio]{
-  display: none;
-}
 body{
   height: 100vh;
   overflow: hidden;
-}
-#sidebar, #page-content {
-  height: 95vh;
-  overflow: scroll;
 }
 * {
   -ms-overflow-style: none;  // IE 10+
@@ -17,11 +9,27 @@ body{
 * ::-webkit-scrollbar {
   display: none;
 }
+
+#sidebar, #page-content {
+  height: 91vh;
+  overflow: scroll;
+}
+
+input[type=radio]{
+  display: none;
+}
+
 .label.custom{
   background: none;
+  width: 60px;
+  height: 60px;
+  transition-property: background-color;
+  transition-duration: 0.2s;
 }
 .nav-radio:hover .label.custom{
   background-color: $color-button-primary;
+  transition-property: background-color;
+  transition-duration: 0.2s;
 }
 .nav-radio {
   .show-on-hover {
@@ -30,7 +38,16 @@ body{
   span {
     color: lightgrey;
     text-align: center;
-  //  TODO line-height
+    line-height: 1em;
+  }
+  &:after{
+    height: 60px;
+    content: '';
+    position: absolute;
+    right:0;
+    top:-100%;
+    transition-property: all;
+    transition-duration: 0.1s;
   }
 }
 #top-navigation-parent {
@@ -45,19 +62,27 @@ body{
       padding: 0.5em;
       &:hover {
         background-color: $color-button-primary;
+        transition-property: background-color;
+        transition-duration: 0.2s;
+        span{
+          color: #ffffff;
+        }
       }
       span{
-        color: #fff;
+        color: lightgrey;
       }
     }
     .nav-buttons {
-      padding: 0.7em 0;
+      padding: 0.9em 0;
       button{
         text-transform: uppercase;
+        margin: 0 0.5em;
       }
     }
     .selected{
       background-color: $color-button-primary;
+      transition-property: background-color;
+      transition-duration: 0.2s;
       span {
         color: #fff;
       }
@@ -71,7 +96,10 @@ body{
   box-shadow: 10px 10px 40px -15px rgba(0,0,0,0.5);
   .label.custom{
     padding: 7% 0;
+    height: 60px;
+    width: 60px;
   }
+
   .selected {
     span.label {
       background-color: $color-button-primary;
@@ -92,11 +120,13 @@ body{
   }
 }
 
-
 .card-container{
   background-color: white;
-  margin: 4vh;
-  height: 86vh;
+  position: relative;
+  margin: 2vh;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
   -webkit-box-shadow: 0 0 20px 0 rgba(0,0,0,0.5);
   -moz-box-shadow: 0 0 20px 0 rgba(0,0,0,0.5);
   box-shadow: 0 0 20px 0 rgba(0,0,0,0.5);
@@ -116,10 +146,94 @@ label{
   &:after{
     content: '';
     height: 60px;
-    width: 5px;
     background-color: $color-button-primary;
     position: absolute;
     right: 0;
     top: 0;
+    border: 3px solid $color-button-primary;
+    border-radius: 5px;
+    transition-property: all;
+    transition-duration: 0.1s;
   }
+}
+#filters{
+  background-color: #2b3a44;
+  color: white;
+}
+h4{
+  display: block;
+  width: 90%;
+  position: relative;
+  height: 1.6em;
+  &:after{
+    content: '';
+    width: 60px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border: 2px solid $color-button-primary;
+  }
+}
+#helpers{
+  position: absolute;
+  bottom: 10px;
+  width: 50%;
+  left: 25%;
+}
+.col{
+  position: relative;
+}
+
+.zoom-button{
+  background-color: #ffffff!important;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  right: 0;
+  bottom: 10px;
+}
+button.inverted{
+  color: $color-button-primary;
+  background-color: $color-inverted;
+  -webkit-box-shadow: 10px 10px 40px -15px rgba(0,0,0,0.5);
+  -moz-box-shadow: 10px 10px 40px -15px rgba(0,0,0,0.5);
+  box-shadow: 10px 10px 40px -15px rgba(0,0,0,0.5);
+}
+#universum-card, #analysis-card{
+  img{
+    width: 95%;
+    margin: 0 auto;
+    display: block;
+  }
+}
+#kennzahlen{
+  h4, h6, p{
+    margin: 0;
+  }
+  p{
+    color: #a8acb9;
+    text-transform: uppercase;
+    line-height: 2em;
+    font-size: 0.6em;;
+  }
+}
+.w40{
+  position: relative;
+}
+.pm_data{
+  text-align: center;
+  height: 35vh;
+}
+.pm_name{
+  display: block;
+  text-transform: uppercase;
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+}
+.pm_value{
+  display: block;
+  margin: 0 auto;
 }

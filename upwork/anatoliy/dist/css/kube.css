@@ -2407,7 +2407,9 @@ label[for=confirm] {
   .card-container {
     margin-top: 1vh; }
   #portfolio-senden-card .col-9 {
-    margin-top: 3%; } }
+    margin-top: 3%; }
+  #sidebar, #page-content {
+    height: 90vh; } }
 
 .term {
   text-align: center; }

@@ -1,35 +1,35 @@
 Vue.component('top-navigation', {
     template:`
-    <div id="top-navigation">
-        <div class="nav-radio col col-1 float-left selected" v-on:click="$root.select($root.options[0])" :id="$root.options[0].id">
+    <div id="top-navigation" class="hide-sm">
+        <div class="nav-radio w6 float-left selected " v-on:click="$root.select($root.options[0])" :id="$root.options[0].id">
             <label :for="$root.options[0].id" class="row align-center">
             <span class="align-center col col-4">
                 <img :src="$root.options[0].img" :alt="$root.options[0].title" class="hide-on-hover">
                 <img :src="$root.options[0].img_hover" class="show-on-hover" :alt="$root.options[0].title">
             </span>
             <span class="col col-12"></span>
-            <span>{{$root.options[0].title}}</span>
+            <span class="small">{{$root.options[0].title}}</span>
             <input type="radio" :value="$root.options[0].id" :id="$root.options[0].id"   name="sidebar-option"></label>
         </div>
         <div class="nav-buttons col col-7 float-right row align-center">
-            <button class="round button" v-on:click="$root.select($root.options[7])">termin verienbaren</button>
-            <button class="round button" v-on:click="$root.select($root.options[6])">portfolio zuseden</button>
-            <button class="round button" v-on:click="$root.select($root.options[8])">kontaktdaten ubrmitteln</button>
+            <button class="round button small" v-on:click="$root.select($root.options[7])">termin verienbaren</button>
+            <button class="round button small" v-on:click="$root.select($root.options[6])">portfolio zuseden</button>
+            <button class="round button small" v-on:click="$root.select($root.options[8])">kontaktdaten ubrmitteln</button>
     </div>
     </div>
     `
 });
 Vue.component('sidebar', {
     template: `
-        <div class="col col-1" id="sidebar">
-            <div v-for="option, i in $root.options" v-if="i > 0" v-on:click="$root.select(option)" class="nav-radio" :id="option.id">
+        <div class="w6 row hide-sm" id="sidebar">
+            <div v-for="option, i in $root.options" v-if="i > 0" v-on:click="$root.select(option)" class="nav-radio hide-sm" :id="option.id">
                 <label :for="option.id" class="row align-center">
                 <span class="label align-center badge custom col col-6">
                     <img :src="option.img" :alt="option.title" class="hide-on-hover">
                     <img :src="option.img_hover" class="show-on-hover" :alt="option.title">
                 </span>
                 <span class="col col-12"></span>
-                <span >{{option.title}}</span>
+                <span class="small">{{option.title}}</span>
                 <input type="radio" :value="option.id" :id="option.id"   name="sidebar-option"></label>
             </div>
         </div>
@@ -37,7 +37,7 @@ Vue.component('sidebar', {
 });
 Vue.component('page-content', {
     template: `
-    <div class="col col-11 row" id="page-content">
+    <div class="w94 row" id="page-content">
         <div class="row col col-12 align-center">
             <div class="col col-9 row align-center" >
                 <div class="row col col-11">
@@ -45,23 +45,92 @@ Vue.component('page-content', {
                     <dashboard          v-if="$root.selected.id=='dashboard'"       ></dashboard>
                     <universum          v-if="$root.selected.id=='universum'"       ></universum>
                     <portfolio-lernen   v-if="$root.selected.id=='portfolio_lernen'"></portfolio-lernen>
-                    <performance         v-if="$root.selected.id=='performance'"      ></performance>
+                    <performance        v-if="$root.selected.id=='performance'"     ></performance>
                     <analysis           v-if="$root.selected.id=='analysis'"        ></analysis>
-                    <portfolio-senden></portfolio-senden>
+                    <portfolio-senden   v-if="$root.selected.id=='portfolio_senden'"        ></portfolio-senden>
                     <termin             v-if="$root.selected.id=='termin'"          ></termin>
                     <kontakten          v-if="$root.selected.id=='kontakten'"       ></kontakten>
                 </div>
             </div>
-            <filters></filters>
+            <div class="col-3 col row">
+                <filters></filters>
+            </div>
         </div>
     </div>
     `
 });
 Vue.component('start', {
     template:`
-    <div id="start-card" class="row align-center col col-12  ">
+    <div id="start-card" class="row align-center col col-12 hide-sm">
         <div class="col col-12 row">
-            <div class="card-container col col-12"></div>
+            <div class="card-container col col-12 row align-center">
+                <h4>In 5 Schritten zu Ihrem Portfolio – so einfach geht‘s</h4>
+                <div class="col col-10 row around smaller">
+                    <div class="col col-10 row around" id="one">
+                        <div class="col-5 col offset-1">
+                            <h5>Persönliche Parameter</h5>
+                            <ul>
+                                <li>
+                                    <span></span>
+                                    <h6>Anlagevolumen</h6>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi ipsum, tincidunt r</p>
+                                </li>
+                                <li>
+                                    <span></span>
+                                    <h6>Auszahlung</h6>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi ipsum, tincidunt efficitur</p>
+                                </li>
+                                <li>
+                                    <span></span>
+                                    <h6>Risikostrategie</h6>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi ipsum, tincidunt r</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col"></div>
+                    </div>
+                    <div class="col col-12 row" id="two">
+                        <div class="col-6 col row"> 
+                            <div class="col-2 col">
+                                <img src="img/21.png" alt="">
+                            </div>
+                            <div class="col col-10">
+                                 <h6>Anlageuniversum erkunden</h6>
+                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi ipsum, tincidunt sed semper quis, fringilla vehicula urna. Suspendisse hendrerit vitae velit eget efficitur</p>
+                             </div>
+                        </div>               
+                        <div class="col-6 col row">
+                            <div class="col-2 col">
+                                <img src="img/22.png" alt="">
+                            </div>
+                            <div class="col col-10">
+                                 <h6>Portfolio kennenlernen</h6>
+                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi ipsum, tincidunt sed semper quis, fringilla vehicula urna. Suspendisse hendrerit vitae velit eget efficitur</p>
+                             </div>
+                        </div>               
+                    </div>
+                    <div class="col col-12 row" id="three">
+                        <div class="col-6 col row">
+                            <div class="col-2 col">
+                                <img src="img/31.png" alt="">
+                            </div>
+                            <div class="col col-10">
+                                <h6>Risiko analysieren</h6>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi ipsum, tincidunt sed semper quis, fringilla vehicula urna. Suspendisse hendrerit vitae velit eget efficitur</p>
+                            </div>
+                        </div>
+                        <div class="col-6 col row">
+                            <div class="col-2 col">
+                                <img src="img/32.png" alt="">
+                            </div>
+                            <div class="col col-10">
+                                <h6>Performance auswerten</h6>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi ipsum, tincidunt sed semper quis, fringilla vehicula urna. Suspendisse hendrerit vitae velit eget efficitur</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     `
@@ -163,22 +232,22 @@ props: ['selected'],
 });
 Vue.component('portfolio-senden', {
     template:`
-   <div id="portfolio-senden-card" v-if="$root.selected.id=='portfolio_senden'" class="row col col-12 ">
+   <div id="portfolio-senden-card" class="row col col-12">
            <div class="card-container col col-12 row align-center">
                 <div class="col col-9 row">
                     <h4>Portfolio zusenden</h4>
                     <form method="post" action="" class="form col col-6 row">
                         <div class="form-item col col-12">
                             <label for="name" class="upper">Name</label>
-                            <input id="name" type="text" name="name" class="col col-12">
+                            <input id="name" type="text"  class="col col-12">
                         </div>
                         <div class="form-item col col-12">
                             <label for="tel" class="upper">telefonnumber</label>
-                            <input id="tel" type="text" name="name" class="col col-12">
+                            <input id="tel" type="text"  class="col col-12">
                         </div>
                         <div class="form-item col col-12">
                             <label for="email" class="upper">email adresse</label>
-                            <input id="email" type="text" name="name" class="col col-12">
+                            <input id="email" type="text"  class="col col-12">
                         </div>
                         <div class="form-item col col-12">
                             <input required type="checkbox" id="confirm">
@@ -186,10 +255,9 @@ Vue.component('portfolio-senden', {
                         </div>
                         <button class="button round" data-component="modal" data-target="#my-modal">ANFRAGE ABSENDEN</button>
                     <div id="my-modal" class="modal-box hide">
-                        <div class="modal">
+                        <div class="modal card-container">
                             <span class="close"></span>
-                            <div class="modal-header">UI Modal</div>
-                            <div class="modal-body">Vielen Dank fur Interesse. Wir melden uns in Kurze mit weiteren interessanten Details bei Ihnen.<br>Ihr ICM-Team</div>
+                            <div class="modal-body">Vielen Dank fur Interesse. Wir melden uns in Kurze mit weiteren interessanten Details bei Ihnen.<br><br><br>Ihr ICM-Team</div>
                         </div>
                     </div>
                     </form>
@@ -203,7 +271,7 @@ Vue.component('portfolio-senden', {
 });
 Vue.component('termin', {
     template:`
-   <div id="termin-card" v-if="$root.selected.id=='termin'" class="row col col-12  align-center">
+   <div id="termin-card" class="row col col-12  align-center">
         <div class="card-container col col-12 row align-center around">
             <h4>Termin vereinbaren</h4>   
             <div class="col col-10 row">
@@ -223,15 +291,52 @@ Vue.component('termin', {
     `
 });
 Vue.component('kontakten', {
+    created: function () {
+        $( "#date" ).datepicker();
+    },
     template:`
-   <div id="kontakten-card" v-if="$root.selected.id=='kontakten'" class="row col col-12 align-center">
-           <div class="card-container col col-12 row"></div>
+   <div id="kontakten-card" class="row col col-12 align-center">
+           <div class="card-container col col-12 row align-center">
+                <form method="post" action="" class="form col col-9 row between">
+                    <h4>Kontaktdaten ubermitteln</h4>
+                    <div class="form-item w45">
+                        <label for="name" class="upper">Name</label>
+                        <input id="name" type="text"  class="col col-12">
+                    </div>
+                    <div class="form-item w50">
+                        <label for="email" class="upper">email adresse</label>
+                        <input id="email" type="text"  class="col col-12">
+                    </div>
+                    <div class="form-item w45">
+                        <label for="tel" class="upper">telefonnumber</label>
+                        <input id="tel" type="text"  class="col col-12">
+                    </div>
+                    <div class="form-item w15">
+                        <label for="date" class="upper">datum</label>
+                        <input id="date" type="text"  class="col col-12">
+                    </div>
+                    <div class="form-item w30">
+                        <label for="time" class="upper">zeit</label>
+                        <input id="time" type="text"  class="col col-12">
+                    </div>
+                    <div class="form-item col col-12">
+                        <label for="time" class="upper">datenschutz</label>
+                        <textarea id="time" rows="4" class="col col-12"></textarea>
+                    </div>
+                    <div class="form-item col col-12">
+                        <input required type="checkbox" id="confirm">
+                        <label class="checkbox smaller" for="confirm">Ich bin mit den Datenschutzbestimmungen einverstanden und stimme einem Anruf durch ICM InvestmentBank AG zu.</label>
+                    </div>
+                    <button class="button round" data-component="modal" data-target="#my-modal">ABSENDEN</button>
+
+                </form>
+       </div>
     </div> 
     `
 });
 Vue.component('filters', {
     template:`
-    <div class="col col-3 row" >
+    <div class="col col-12 row" >
         <div class="card-container col col-12" id="filters">
         <img src="img/filters.png" alt="">
         </div>

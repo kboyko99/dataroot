@@ -287,12 +287,12 @@ a.muted:hover {
     color: $color-black;
 }
 .smaller {
-	font-size: $font-size-smaller;
-	line-height: $base-line-smaller;
+	font-size: $font-size-smaller !important;
+	line-height: $base-line-smaller !important;
 }
 .small {
-	font-size: $font-size-small;
-	line-height: $base-line-small;
+	font-size: $font-size-small !important;
+	line-height: $base-line-small !important;
 }
 .big {
 	font-size: $font-size-big;

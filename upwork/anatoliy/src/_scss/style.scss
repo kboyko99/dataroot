@@ -11,7 +11,7 @@ body{
 }
 
 #sidebar, #page-content {
-  height: 91vh;
+  height: 92.5vh;
   overflow: scroll;
 }
 
@@ -23,8 +23,8 @@ body{
 
 .label.custom{
   background: none;
-  width: 55px;
-  height: 55px;
+  width: 50px;
+  height: 50px;
   transition-property: background-color;
   transition-duration: 0.2s;
 }
@@ -43,7 +43,7 @@ body{
     line-height: 1em;
   }
   &:after{
-    height: 55px;
+    height: 50px;
     content: '';
     position: absolute;
     right:0;
@@ -102,8 +102,8 @@ body{
   box-shadow: 10px 10px 40px -15px rgba(0,0,0,0.5);
   .label.custom{
     padding: 7% 0;
-    height: 55px;
-    width: 55px;
+    height: 50px;
+    width: 50px;
   }
 
   .selected {
@@ -151,7 +151,7 @@ label{
   }
   &:after{
     content: '';
-    height: 55px;
+    height: 50px;
     background-color: $color-button-primary;
     position: absolute;
     right: 0;
@@ -175,12 +175,18 @@ h4{
   margin-bottom: 0;
   &:after{
     content: '';
-    width: 55px;
+    width: 50px;
     position: absolute;
     left: 0;
     bottom: 0;
     border: 2px solid $color-button-primary;
   }
+}
+ul li{
+  list-style-type: none;
+}
+h6{
+  margin-bottom: 0;
 }
 #helpers{
   position: absolute;
@@ -247,11 +253,25 @@ button.inverted{
   display: block;
   margin: 0 auto;
 }
-#portfolio-senden-card {
+#portfolio-senden-card, #kontakten-card {
   .col-9{
-    margin-top: 7%;
+    margin: 7% 0;
   }
-  //text-transform: uppercase;
+}
+
+
+form{
+  label{
+    font-size: $font-size-smaller;
+    width: 90%;
+    display: inline-block;
+    padding-left: 1vw;
+    vertical-align: text-top;
+  }
+  input{
+    font-size: $font-size-smaller;
+    line-height: $input-height-small;
+  }
 }
 #portfoliomix img{
   height: 55%;
@@ -273,28 +293,74 @@ input[type=checkbox]{
 .pm button:hover{
   border-color:rgba($color-button-primary, .5)!important;
 }
-label[for=confirm]{
-  width: 90%;
-  display: inline-block;
-  vertical-align: text-top;
-}
 #page-content .col-6 img{
   width: 85%;
+}
+#portfolio-senden-card .col-6{
+  img{
+    width: 100%;
+  }
 }
 @media (max-width: 1400px) {
   .card-container{
     margin-top: 1vh;
   }
-  #portfolio-senden-card .col-9 {
-    margin-top: 3%;
+  #portfolio-senden-card, #kontakten-card {
+    .form {
+      margin: 3% 0;
+    }
   }
   #sidebar, #page-content {
-    height: 90vh;
+    height: 92vh;
+  }
+  .small{
+    font-size: $font-size-smaller!important;
+  }
+  #top-navigation {
+    .nav-buttons{
+      padding: 0.5em!important;
+    }
+  }
+  .nav-radio{
+    .label.custom{
+      width: 40px;
+      height: 40px;
+      img{
+        width: 60%;
+      }
+    }
+    span{
+      line-height: 1em!important;
+    }
+    &:after{
+      height: 40px;
+    }
   }
 }
+
 .term{
   text-align: center;
 }
 .grey{
   color: $color_text;
+}
+
+textarea{
+  border-radius: 10px!important;
+  resize: none;
+}
+#modal-overlay{
+  display: none!important;
+}
+.modal{
+  text-align: center;
+  margin-left: auto!important;
+  margin-right: auto!important;
+}
+#kontakten-card form{
+  margin-bottom: 5%!important;
+}
+#start-card .card-container{
+  background: url(../../img/bg.png) no-repeat 50% 50%;
+  background-size: 80%;
 }

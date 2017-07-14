@@ -127,4 +127,4 @@ const app = new Vue({
     data: globals
 });
 
-globals.selected = globals.options[0];
+globals.selected = $(window).width() < 700 ? globals.options[1] : globals.options[0];

@@ -64,8 +64,8 @@ Vue.component('start', {
     <div id="start-card" class="row align-center col col-12 hide-sm">
         <div class="col col-12 row">
             <div class="card-container col col-12 row align-center">
+                <div class="col col-11 row around smaller">
                 <h4>In 5 Schritten zu Ihrem Portfolio – so einfach geht‘s</h4>
-                <div class="col col-10 row around smaller">
                     <div class="col col-10 row around" id="one">
                         <div class="col-5 col offset-1">
                             <h5>Persönliche Parameter</h5>
@@ -94,7 +94,7 @@ Vue.component('start', {
                             <div class="col-2 col">
                                 <img src="img/21.png" alt="">
                             </div>
-                            <div class="col col-10">
+                            <div class="col col-9">
                                  <h6>Anlageuniversum erkunden</h6>
                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi ipsum, tincidunt sed semper quis, fringilla vehicula urna. Suspendisse hendrerit vitae velit eget efficitur</p>
                              </div>
@@ -103,7 +103,7 @@ Vue.component('start', {
                             <div class="col-2 col">
                                 <img src="img/22.png" alt="">
                             </div>
-                            <div class="col col-10">
+                            <div class="col col-9">
                                  <h6>Portfolio kennenlernen</h6>
                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi ipsum, tincidunt sed semper quis, fringilla vehicula urna. Suspendisse hendrerit vitae velit eget efficitur</p>
                              </div>
@@ -114,7 +114,7 @@ Vue.component('start', {
                             <div class="col-2 col">
                                 <img src="img/31.png" alt="">
                             </div>
-                            <div class="col col-10">
+                            <div class="col col-9">
                                 <h6>Risiko analysieren</h6>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi ipsum, tincidunt sed semper quis, fringilla vehicula urna. Suspendisse hendrerit vitae velit eget efficitur</p>
                             </div>
@@ -123,7 +123,7 @@ Vue.component('start', {
                             <div class="col-2 col">
                                 <img src="img/32.png" alt="">
                             </div>
-                            <div class="col col-10">
+                            <div class="col col-9">
                                 <h6>Performance auswerten</h6>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi ipsum, tincidunt sed semper quis, fringilla vehicula urna. Suspendisse hendrerit vitae velit eget efficitur</p>
                             </div>

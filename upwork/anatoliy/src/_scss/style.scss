@@ -336,6 +336,16 @@ input[type=checkbox]{
       height: 40px;
     }
   }
+  #start-card .smaller{
+    font-size: 55%!important;
+    h5, h6 {
+      font-size: 135% !important;
+    }
+    h4{
+      font-size: 190%!important;
+      
+    }
+  }
 }
 
 .term{
@@ -361,9 +371,18 @@ textarea{
   margin-bottom: 5%!important;
 }
 #start-card .card-container .col-11{
-  background: url(../../img/bg.png) no-repeat 0 0;
-  background-color: white;
-  background-size: contain;
+  height: 41vw;
+  width: 60vw;
+  #start-wrapper {
+    position: absolute;
+    top: 2%;
+    width: 85%;
+    height: 90%;
+    background: url(../../img/bg.png) no-repeat 0 0;
+    background-color: white;
+    background-size: contain;
+    left: 5%;
+  }
   p{
     margin: 0;
   }

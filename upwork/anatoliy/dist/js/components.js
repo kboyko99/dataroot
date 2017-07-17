@@ -96,8 +96,9 @@ Vue.component('start', {
     template:`
     <div id="start-card" class="row align-center col col-12 hide-sm">
         <div class="col col-12 row">
-            <div class="card-container col col-12 row align-center">
+            <div class="card-container row align-center">
                 <div class="col col-11 row around smaller">
+                <div id="start-wrapper"></div>
                 <h4>In 5 Schritten zu Ihrem Portfolio – so einfach geht‘s</h4>
                     <div class="col col-10 row around" id="one">
                         <div class="col-5 col offset-1">
@@ -122,7 +123,7 @@ Vue.component('start', {
                         </div>
                         <div class="col-6 col"></div>
                     </div>
-                    <div class="col col-12 row" id="two">
+                    <div class="col col-10 row" id="two">
                         <div class="col-6 col row"> 
                             <div class="col-2 col">
                                 <img src="img/21.png" alt="">
@@ -142,7 +143,7 @@ Vue.component('start', {
                              </div>
                         </div>               
                     </div>
-                    <div class="col col-12 row" id="three">
+                    <div class="col col-10 row" id="three">
                         <div class="col-6 col row">
                             <div class="col-2 col">
                                 <img src="img/31.png" alt="">
@@ -174,9 +175,9 @@ Vue.component('dashboard', {
         <div class="row col col-12 between">
             <div class="col col-6 row"><universum :selected="true"></universum><zoom :select="$root.options[2]" text="Zoom"></zoom></div>
             <div class="col col-6 row"><performance :selected=true></performance><zoom :select="$root.options[4]" text="Zoom"></zoom></div>
-            <div class="w30 row">
+            <div class="col col-4 row">
                 <div class="col col-12 row">
-                    <div class="card-container col col-12 row align-center" id="kennzahlen">    
+                    <div class="card-container row align-center" id="kennzahlen">    
                         <h4>Kennzahlen</h4>
                         <div class="col col-11">
                             <h6><span>2.61%</span> Rendite</h6>
@@ -189,16 +190,18 @@ Vue.component('dashboard', {
                     </div>
                 </div>
             </div>
-            <div class="w30 row">
+            <div class="col col-4 row">
                 <div class="col col-12 row">
-                    <div class="card-container col col-12 row align-center" id="portfoliomix">
-                        <h4>Portfoliomix</h4>
-                        <img src="img/portfoliomix.png" alt="">
-                        <zoom :select="$root.options[3]" text="Details"></zoom>
+                    <div class="card-container" id="portfoliomix">
+                        <div class="col-12 col">
+                            <h4>Portfoliomix</h4>
+                            <img src="img/portfoliomix.png" alt="">
+                        </div>
                     </div>
+                    <zoom :select="$root.options[3]" text="Details"></zoom>
                 </div>
             </div>
-            <div class="w40 row"><analysis :selected="true"></analysis><zoom :select="$root.options[5]" text="Zoom"></zoom></div>
+            <div class="col col-4 row"><analysis :selected="true"></analysis><zoom :select="$root.options[5]" text="Zoom"></zoom></div>
         </div>
     </div> 
     `
@@ -221,7 +224,7 @@ Vue.component('portfolio-lernen', {
     props: ['selected'],
     template:`
    <div id="portfolio-lernen-card" class="row col col-12 align-center">
-        <div class="card-container col col-12 row align-center">
+        <div class="card-container row align-center">
         <h4>Ihr persönlicher Portfoliomix im Detail</h4>
             <div class="col col-3 row align-center pm" v-for="pm in $root.portfoliomixes">
                 <div class="col col-11 row">
@@ -268,7 +271,7 @@ props: ['selected'],
 Vue.component('portfolio-senden', {
     template:`
    <div id="portfolio-senden-card" class="row col col-12">
-           <div class="card-container col col-12 row align-center">
+           <div class="card-container row align-center">
                 <div class="col col-9 row">
                     <h4>Portfolio zusenden</h4>
                     <form method="post" action="" class="form col col-6 row">
@@ -307,7 +310,7 @@ Vue.component('portfolio-senden', {
 Vue.component('termin', {
     template:`
    <div id="termin-card" class="row col col-12  align-center">
-        <div class="card-container col col-12 row align-center around">
+        <div class="card-container row align-center around">
             <h4>Termin vereinbaren</h4>   
             <div class="col col-10 row">
                 <div class="term col col-4 row align-center" v-for="t in $root.team">
@@ -331,7 +334,7 @@ Vue.component('kontakten', {
     },
     template:`
    <div id="kontakten-card" class="row col col-12 align-center">
-           <div class="card-container col col-12 row align-center">
+           <div class="card-container row align-center">
                 <form method="post" action="" class="form col col-9 row between">
                     <h4>Kontaktdaten ubermitteln</h4>
                     <div class="form-item w45">
@@ -372,7 +375,7 @@ Vue.component('kontakten', {
 Vue.component('filters', {
     template:`
     <div class="col col-12 row" >
-        <div class="card-container col col-12" id="filters">
+        <div class="card-container row align-center" id="filters">
         <img src="img/filters.png" alt="">
         </div>
     </div>

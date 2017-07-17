@@ -1695,6 +1695,14 @@ button:hover,
   .hide-sm {
     display: none !important; } }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+  .hide-md {
+    display: none !important; } }
+
+@media (min-width: 1200px) {
+  .hide-md {
+    display: none !important; } }
+
 @media (min-width: 768px) {
   .show-sm {
     display: none !important; } }
@@ -2187,11 +2195,11 @@ body {
 * ::-webkit-scrollbar {
   display: none; }
 
-#sidebar, #page-content {
-  height: 94vh;
+.sidebar, .page-content {
+  height: 92vh;
   overflow: scroll; }
 
-#sidebar input[type=radio], #top-navigation input[type=radio] {
+.sidebar input[type=radio], #top-navigation input[type=radio], .mobile input[type=radio] {
   display: none; }
 
 .label.custom {
@@ -2242,7 +2250,7 @@ body {
     color: #676b72; }
 
 #top-navigation .nav-buttons {
-  padding: 0.9em 0; }
+  padding: 0.8em 0; }
   #top-navigation .nav-buttons button {
     text-transform: uppercase;
     margin: 0 0.5em;
@@ -2257,19 +2265,19 @@ body {
   #top-navigation .selected span {
     color: #fff; }
 
-#sidebar {
+.sidebar {
   z-index: 1;
   -webkit-box-shadow: 10px 10px 40px -15px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 10px 10px 40px -15px rgba(0, 0, 0, 0.5);
   box-shadow: 10px 10px 40px -15px rgba(0, 0, 0, 0.5); }
-  #sidebar .label.custom {
+  .sidebar .label.custom {
     padding: 7% 0;
     height: 50px;
     width: 50px; }
-  #sidebar .selected span.label {
+  .sidebar .selected span.label {
     background-color: #ea6d28; }
 
-#page-content {
+.page-content {
   z-index: 0;
   background-color: #eeeeee; }
 
@@ -2427,7 +2435,7 @@ input[type=checkbox] {
 .pm button:hover {
   border-color: rgba(234, 109, 40, 0.5) !important; }
 
-#page-content .col-6 img {
+.page-content .col-6 img {
   width: 85%; }
 
 #portfolio-senden-card .col-6 img {
@@ -2438,7 +2446,7 @@ input[type=checkbox] {
     margin-top: 1vh; }
   #portfolio-senden-card .form, #kontakten-card .form {
     margin: 3% 0; }
-  #sidebar, #page-content {
+  .sidebar, .page-content {
     height: 92vh; }
   .small {
     font-size: 12px !important; }
@@ -2481,3 +2489,23 @@ textarea {
   background-size: contain; }
   #start-card .card-container .col-11 p {
     margin: 0; }
+
+.mobile {
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  z-index: 4;
+  background-color: white; }
+  .mobile.page-content {
+    z-index: 3;
+    right: 0;
+    width: 85%; }
+
+@media all and (max-width: 768px) {
+  .w15 .nav-radio span.small {
+    display: none; }
+  .page-content .row, .page-content .col {
+    flex-direction: row;
+    flex-wrap: wrap; }
+  .nav-radio .label.custom {
+    margin: 0 auto; } }

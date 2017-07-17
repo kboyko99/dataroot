@@ -115,7 +115,8 @@ const globals = {
             city: 'Dresden'
         }
     ],
-    select: function (opt) {
+    select: function (opt, e) {
+        e.preventDefault();
         $('.selected').removeClass('selected');
         $('#' + opt.id).addClass('selected');
         this.selected = opt;
@@ -127,4 +128,4 @@ const app = new Vue({
     data: globals
 });
 
-globals.selected = $(window).width() < 700 ? globals.options[1] : globals.options[0];
+globals.selected = $(window).width() < 700 ? globals.select(globals.options[1]) : globals.select(globals.options[0]);

@@ -10,20 +10,28 @@
     <link rel="stylesheet" href="dist/css/kube.css">
     <link rel="stylesheet" href="dist/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/build/jquery.datetimepicker.min.css" />
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 
     <script src="dist/js/vue.js"></script>
     <script src="dist/js/components.js"></script>
     <script src="dist/js/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/build/jquery.datetimepicker.full.min.js"></script>
 
 </head>
 <body>
     <div id="app" class="row">
-        <div class="col col-12" id="top-navigation-parent hide-sm">
+        <div class="col col-12  hide-sm" id="top-navigation-parent">
             <top-navigation></top-navigation>
         </div>
-        <sidebar></sidebar>
-        <page-content></page-content>
+        <div class="row col col-12 hide-sm">
+            <sidebar :big="false"></sidebar>
+            <page-content :big="true"></page-content>
+        </div>
+        <div class="row col col-12 hide-md">
+            <sidebar :big="true"></sidebar>
+            <page-content :big="false"></page-content>
+        </div>
     </div>
 
     <script src="dist/js/kube.js"></script>

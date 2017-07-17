@@ -20,9 +20,30 @@ Vue.component('top-navigation', {
     `
 });
 Vue.component('sidebar', {
+    props: ['big'],
+    data: function () {
+        return {
+            classObject: {
+                w40: this.big,
+                w6: !this.big,
+                'hide-sm': !this.big,
+                'hide-md': this.big,
+                'sidebar': true,
+                'mobile': this.big,
+                row: true,
+                'align-center': true,
+                expanded: true
+            }
+        }
+    },
+    methods: {
+        toggle: function () {
+            $('.sidebar').toggleClass('w40').toggleClass('w15');
+        }
+    },
     template: `
-        <div class="w6 row hide-sm" id="sidebar">
-            <div v-for="option, i in $root.options" v-if="i > 0" v-on:click="$root.select(option)" class="nav-radio hide-sm" :id="option.id">
+        <div v-bind:class="classObject" v-on:click="toggle()">
+            <div v-for="option, i in $root.options" v-if="i > 0" v-on:click="$root.select(option, $event); toggle()" class="nav-radio col col-12" :id="option.id">
                 <label :for="option.id" class="row align-center">
                 <span class="label align-center badge custom col col-6">
                     <img :src="option.img" :alt="option.title" class="hide-on-hover">
@@ -36,8 +57,20 @@ Vue.component('sidebar', {
     `
 });
 Vue.component('page-content', {
+    props: ['big'],
+    data: function () {
+        return {
+            classObject: {
+                w94: this.big,
+                w100: !this.big,
+                mobile: !this.big,
+                "page-content": true,
+                row: true
+            }
+        }
+    },
     template: `
-    <div class="w94 row" id="page-content">
+    <div v-bind:class="classObject">
         <div class="row col col-12 align-center">
             <div class="col col-9 row align-center" >
                 <div class="row col col-11">
@@ -261,7 +294,7 @@ Vue.component('portfolio-senden', {
                         </div>
                     </div>
                     </form>
-                    <div class="col col-6">
+                    <div class="col col-6 hide-sm">
                         <img src="img/graphic_portfolio_senden.png" alt="">
                     </div>
                 </div>

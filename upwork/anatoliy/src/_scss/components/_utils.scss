@@ -36,6 +36,16 @@
 		display: none !important;
 	}
 }
+@include breakpoint(md){
+  .hide-md {
+    display: none !important;
+  }
+}
+@include breakpoint(lg){
+  .hide-md {
+    display: none !important;
+  }
+}
 @include breakpoint($min: $sm) {
     .show-sm {
     	display: none !important;

@@ -2492,6 +2492,8 @@ textarea {
 #start-card .card-container .col-11 {
   height: 41vw;
   width: 60vw; }
+  #start-card .card-container .col-11 img {
+    margin-top: 10%; }
   #start-card .card-container .col-11 #start-wrapper {
     position: absolute;
     top: 2%;

@@ -11,7 +11,7 @@ Vue.component('top-navigation', {
             <span class="small">{{$root.options[0].title}}</span>
             <input type="radio" :value="$root.options[0].id" :id="$root.options[0].id"   name="sidebar-option"></label>
         </div>
-        <div class="nav-buttons col col-7 float-right row align-center">
+        <div class="nav-buttons float-right row align-center">
             <button class="round button small" v-on:click="$root.select($root.options[7])">termin verienbaren</button>
             <button class="round button small" v-on:click="$root.select($root.options[6])">portfolio zuseden</button>
             <button class="round button small" v-on:click="$root.select($root.options[8])">kontaktdaten ubrmitteln</button>

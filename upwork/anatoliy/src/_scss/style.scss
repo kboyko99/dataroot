@@ -393,4 +393,19 @@ textarea{
   .nav-radio .label.custom{
     margin: 0 auto;
   }
+  #helpers, .zoom-button{
+    position: relative;
+    left: 0;
+    &.button, button {
+      display: block;
+      width: 90%;
+      margin-top: 5%;
+      margin-left: 5%;
+      transform: none;
+
+    }
+  }
+  h4{
+    height: auto;
+  }
 }

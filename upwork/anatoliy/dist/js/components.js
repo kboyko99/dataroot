@@ -242,10 +242,12 @@ Vue.component('portfolio-lernen', {
 Vue.component('performance', {
     props: ['selected'],
     template:`
-    <div id="performance-card" class="row col col-12 align-center card-container">
-        <h4>Portfolioperformance</h4>
-        <div class="col col-12"><img src="img/tmpl_performance.png" alt=""></div>
-        <helpers v-if="!selected" :set="3"></helpers>
+    <div id="performance-card" class="row col col-12 align-center">
+        <div class="card-container row align-center">
+            <h4>Portfolioperformance</h4>
+            <div class="col col-12"><img src="img/tmpl_performance.png" alt=""></div>
+            <helpers v-if="!selected" :set="3"></helpers>
+        </div>
     </div> 
     `
 });

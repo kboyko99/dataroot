@@ -28,10 +28,10 @@ Vue.component('sidebar', {
                 w6: !this.big,
                 'hide-sm': !this.big,
                 'hide-md': this.big,
-                'sidebar': true,
-                'mobile': this.big,
-                row: true,
+                mobile: this.big,
                 'align-center': true,
+                sidebar: true,
+                row: true,
                 expanded: true
             }
         }

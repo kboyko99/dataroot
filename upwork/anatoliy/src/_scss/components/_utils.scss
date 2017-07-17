@@ -51,6 +51,11 @@
     	display: none !important;
 	}
 }
+@include breakpoint($min: $md) {
+  .hide-md {
+    display: none !important;
+  }
+}
 
 // Print
 @media print {

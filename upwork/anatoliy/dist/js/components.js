@@ -192,11 +192,9 @@ Vue.component('dashboard', {
             </div>
             <div class="col col-4 row">
                 <div class="col col-12 row">
-                    <div class="card-container" id="portfoliomix">
-                        <div class="col-12 col">
-                            <h4>Portfoliomix</h4>
-                            <img src="img/portfoliomix.png" alt="">
-                        </div>
+                    <div class="card-container row align-center" id="portfoliomix">
+                        <h4>Portfoliomix</h4>
+                        <img src="img/portfoliomix.png" alt="" class="col col-12">
                     </div>
                     <zoom :select="$root.options[3]" text="Details"></zoom>
                 </div>

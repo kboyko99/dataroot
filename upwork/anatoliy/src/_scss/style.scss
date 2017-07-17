@@ -430,4 +430,12 @@ textarea{
   h4{
     height: auto;
   }
+  .card-container{
+    padding: 1vh;
+  }
+  #portfolio-lernen-card{
+    .col-3 {
+      margin-top: 1vh;
+    }
+  }
 }

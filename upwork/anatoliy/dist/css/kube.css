@@ -1707,6 +1707,10 @@ button:hover,
   .show-sm {
     display: none !important; } }
 
+@media (min-width: 1024px) {
+  .hide-md {
+    display: none !important; } }
+
 @media print {
   .hide-print {
     display: none !important; }
@@ -2535,4 +2539,8 @@ textarea {
       margin-left: 5%;
       transform: none; }
   h4 {
-    height: auto; } }
+    height: auto; }
+  .card-container {
+    padding: 1vh; }
+  #portfolio-lernen-card .col-3 {
+    margin-top: 1vh; } }

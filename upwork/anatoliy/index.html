@@ -20,21 +20,22 @@
 
 </head>
 <body>
-    <div id="app" class="row">
-        <div class="col col-12  hide-sm" id="top-navigation-parent">
-            <top-navigation></top-navigation>
-        </div>
-        <div class="row col col-12 hide-sm">
-            <sidebar :big="false"></sidebar>
-            <page-content :big="true"></page-content>
-        </div>
-        <div class="row col col-12 hide-md">
-            <sidebar :big="true"></sidebar>
-            <page-content :big="false"></page-content>
-        </div>
+<script src="dist/js/index.js"></script>
+<div id="app" class="row">
+    <div class="col col-12  hide-sm" id="top-navigation-parent">
+        <top-navigation></top-navigation>
     </div>
+    <div class="row col col-12 hide-sm" v-if="!mobile">
+        <sidebar :big="false"></sidebar>
+        <page-content :big="true"></page-content>
+    </div>
+    <div class="row col col-12 hide-md" v-else="">
+        <sidebar :big="true"></sidebar>
+        <page-content :big="false"></page-content>
+    </div>
+</div>
+<script src="dist/js/kube.js"></script>
+<script src="dist/js/vue_root.js"></script>
 
-    <script src="dist/js/kube.js"></script>
-    <script src="dist/js/vue_root.js"></script>
 </body>
 </html>

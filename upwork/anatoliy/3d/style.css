@@ -1,0 +1,25 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+#container {
+    width: 60%;
+    height: 40vw;
+}
+canvas{
+    margin: 1em;
+    border: 1px solid gray;
+    border-radius: 2em;
+    box-shadow: 0 0 1em 0em gray;
+    width: 100%!important;
+    height: 100%!important;
+}
+.sliders{
+    margin:2em;
+    width: 30%;
+}
+.controls{
+    float: right;
+    margin-right: 5em;
+}

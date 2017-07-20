@@ -20,15 +20,15 @@ Vue.component('top-navigation', {
     `
 });
 Vue.component('sidebar', {
-    props: ['big'],
     data: function () {
+        let big = $(window).width() < 769;
         return {
             classObject: {
-                w40: this.big,
-                w6: !this.big,
-                'hide-sm': !this.big,
-                'hide-md': this.big,
-                mobile: this.big,
+                w15: big,
+                w6: !big,
+                'hide-sm': !big,
+                'hide-md': big,
+                mobile: big,
                 'align-center': true,
                 sidebar: true,
                 row: true,
@@ -59,12 +59,15 @@ Vue.component('sidebar', {
 Vue.component('page-content', {
     props: ['big'],
     data: function () {
+        let big = $(window).width() < 769;
         return {
             classObject: {
-                w94: this.big,
-                w100: !this.big,
-                mobile: !this.big,
+                w94: !big,
+                w100: big,
+                mobile: big,
                 "page-content": true,
+                'hide-sm': !big,
+                'hide-md': big,
                 row: true
             }
         }
@@ -173,7 +176,9 @@ Vue.component('dashboard', {
     template:`
     <div id="dashboard-card" class="row col col-12 align-center">
         <div class="row col col-12 between">
-            <div class="col col-6 row"><universum :selected="true"></universum><zoom :select="$root.options[2]" text="Zoom"></zoom></div>
+            <div class="col col-6 row">
+            <universum :selected="true"></universum>
+            <zoom :select="$root.options[2]" text="Zoom"></zoom></div>
             <div class="col col-6 row"><performance :selected=true></performance><zoom :select="$root.options[4]" text="Zoom"></zoom></div>
             <div class="col col-4 row">
                 <div class="col col-12 row">
@@ -206,12 +211,26 @@ Vue.component('dashboard', {
 });
 Vue.component('universum', {
     props: ['selected'],
+    created: function(){
+        console.log("created", 'universum');
+        if (!this.selected) {
+            console.debug($('#universum-card#cube_container'));
+            $('#cube_container').html(createBigRenderer());
+        }
+        else {
+            $('#small_cube_container').html(createSmallRenderer());
+        }
+
+        animate();
+    },
     template:`
    <div id="universum-card" class="row col col-12 align-center">
        <div class="card-container align-center row">
            <h4>Anlageuniversum</h4>
-           <div class="col col-12">
-                <img src="img/tmpl_universum.png" alt="">
+           <div class="col col-12"> 
+                <!--<img src="img/tmpl_universum.png" alt="">-->
+                <div v-if="selected" id="small_cube_container"></div>
+                <div v-else="" id="cube_container"></div>
            </div>
            <helpers v-if="!selected" :set="1"></helpers>
         </div> 
@@ -374,7 +393,16 @@ Vue.component('filters', {
     template:`
     <div class="col col-12 row" >
         <div class="card-container row align-center" id="filters">
-        <img src="img/filters.png" alt="">
+        <!--<img src="img/filters.png" alt="">-->
+        <div class="sliders">
+            <h5>Anlagevolumen</h5>
+            <div id="slider-volume"></div>
+            <input type="text" id="amount-volume" readonly style="border:0; color:#f6931f; font-weight:bold;">
+            <div id="slider-pays"></div>
+            <input type="text" id="amount-pays" readonly style="border:0; color:#f6931f; font-weight:bold;">
+            <div id="slider-risks"></div>
+            <input type="text" id="amount-risks" readonly style="border:0; color:#f6931f; font-weight:bold;">
+        </div>
         </div>
     </div>
     `

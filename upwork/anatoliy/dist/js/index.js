@@ -120,10 +120,12 @@ const globals = {
         $('#' + opt.id).addClass('selected');
         this.selected = opt;
     },
-    mobile: $(window).width() < 700
+    mobile: $(window).width() < 769
 };
 
 if(globals.mobile)
     globals.select(globals.options[1]);
 else
-    globals.select(globals.options[0]);
+    globals.select(globals.options[0]);/**
+ * Created by shpp-admin on 19.07.2017.
+ */

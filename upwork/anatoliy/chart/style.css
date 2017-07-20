@@ -1,0 +1,7 @@
+.graphics{
+    width: 100%;
+}
+.graphics>div{
+    width: 50%;
+    height: initial;
+}

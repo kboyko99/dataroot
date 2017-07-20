@@ -1,0 +1,23 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+#container {
+    width: 640px;
+    height: 400px;
+}
+canvas{
+    margin: 1em;
+    border: 1px solid gray;
+    border-radius: 2em;
+    box-shadow: 0 0 1em 0em gray;
+}
+.sliders{
+    margin:2em;
+    width: 30%;
+}
+.controls{
+    float: right;
+    margin-right: 5em;
+}

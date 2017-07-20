@@ -439,3 +439,16 @@ textarea{
     }
   }
 }
+
+canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+#cube_container {
+  height: 85%;
+  margin: 0 3em;
+}
+#small_cube_container{
+  margin: 0.75em 0.75em 1.5em;
+}

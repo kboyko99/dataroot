@@ -4,15 +4,16 @@ body{
     font-family: 'Julius Sans One', sans-serif;
     /*font-family: 'Syncopate', sans-serif;*/
 }
-#video-background{
-    width: 100vw;
-    height: auto;
-    max-height:100vh;
-    position: relative;
+#video-background {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
 }
-iframe{ 
-    width: 100%;
-}
+
 .container{
     position: absolute;
     width: 100vw;
@@ -21,11 +22,6 @@ iframe{
     z-index: 1;
 }
 
-#video-overlay{
-    background-color: rgba(255, 255, 255, 0.5);
-    height:100vh;
-    z-index: 2;
-}
 main{
     color: white;
     text-align: center;

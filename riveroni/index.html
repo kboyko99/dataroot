@@ -8,17 +8,23 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="video-background" id="video-background">
+<div id="video-background">
     <video preload="auto" muted data-object-fit="cover" autoplay loop>
         <source src="mov/video.mp4"/>
     </video>
-    <main class="container">
-            <h1>Riveroni</h1>
-            <h3>making rivers cleaner</h3>
-    </main>
-    <footer>
-        <span>Contact us: <a href="mailto:rkoptev70@gmail.com">rkoptev70@gmail.com</a> </span>
-    </footer>
 </div>
+<main class="container">
+    <h1>Riveroni</h1>
+    <h3>making rivers cleaner</h3>
+</main>
+<footer>
+    <span>Contact us: <a href="mailto:rkoptev70@gmail.com">rkoptev70@gmail.com</a> </span>
+</footer>
+<script>
+    function fitToWidth() {
+        return window.innerWidth/window.innerHeight < 1.8;
+    }
+    document.getElementsByTagName('video')[0].style = fitToWidth() ? "height: 100%" : "width: 100%";
+</script>
 </body>
 </html>

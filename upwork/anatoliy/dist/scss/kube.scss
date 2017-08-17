@@ -1,6 +1,6 @@
 // BREAKPOINTS
 // ---------------------------------------------------------------------------
-$sm: 768px !default;
+$sm: 1024px !default;
 $md: 1024px !default;
 $lg: 1200px !default;
 
@@ -159,7 +159,7 @@ $button-font-size-large: $button-font-size + 4px !default;
 $button-base-line: 20px !default;
 
 // Height
-$button-height: 40px !default;
+$button-height: 38px !default;
 $button-height-small: 36px !default;
 $button-height-big: 48px !default;
 $button-height-large: 56px !default;
@@ -532,7 +532,7 @@ $overlay-background-color: rgba(#fff, .95);
 	    background-color: rgba($color-back, .7);
     }
     &.outline {
-        background: none;
+        background: white;
         color: $color-back;
         border-color: $color-back;
 
@@ -582,7 +582,7 @@ $overlay-background-color: rgba(#fff, .95);
 
     &.tag,
     &.outline {
-        background: none;
+        background: white;
         border-color: $back;
         color: $back;
     }

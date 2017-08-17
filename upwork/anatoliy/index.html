@@ -1,40 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Some title</title>
+    <title>Site title</title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Kube CSS -->
+    <!-- CSS -->
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="dist/css/kube.css">
     <link rel="stylesheet" href="dist/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/build/jquery.datetimepicker.min.css" />
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <!--<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">
 
     <script src="dist/js/vue.js"></script>
-    <script src="dist/js/components.js"></script>
-    <script src="dist/js/jquery.min.js"></script>
     <script src="dist/js/three.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/build/jquery.datetimepicker.full.min.js"></script>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js" integrity="sha256-SiHXR50l06UwJvHhFY4e5vzwq75vEHH+8fFNpkXePr0=" crossorigin="anonymous"></script>
+
+    <script src="dist/js/components.js"></script>
+    <script src="dist/js/index.js"></script>
 </head>
 <body>
     <div id="app" class="row">
         <div class="col col-12  hide-sm" id="top-navigation-parent">
             <top-navigation></top-navigation>
         </div>
-        <div class="row col col-12 ">
-            <sidebar ></sidebar>
-            <page-content ></page-content>
+        <div class="row col col-12 hide-sm" v-if="!mobile">
+            <sidebar :big="false"></sidebar>
+            <page-content :big="true"></page-content>
+        </div>
+        <div class="row col col-12 hide-md" v-else="">
+            <sidebar :big="true"></sidebar>
+            <page-content :big="false"></page-content>
         </div>
     </div>
-
     <script src="dist/js/kube.js"></script>
     <script src="dist/js/script.js"></script>
+    <script src="dist/js/charts.js"></script>
     <script src="dist/js/vue_root.js"></script>
 </body>
 </html>

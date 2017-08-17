@@ -1,0 +1,405 @@
+.graphic{
+    margin: 1em;
+}
+#filters{
+    width:100%;
+    padding-top: 2em;
+}
+.sliders{
+    width: 100%;
+    padding: 15% 10%;
+}
+h5{
+    color: white;
+    text-transform: uppercase;
+    font-weight:600;
+}
+#amount-volume,
+#amount-pays,
+#amount-risks{
+    color: white;
+    font-weight:300;
+    border:0;
+    background: transparent;
+    font-size: 0.75em;
+    padding: 0;
+    overflow: visible;
+    text-align: center
+}
+#amount-volume:focus,
+#amount-pays:focus,
+#amount-risks:focus{
+    box-shadow:none;
+}
+
+canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.cube_container {
+    height: 85%;
+    margin: 0 3em; }
+
+.small_cube_container {
+    margin: 0.5em auto;
+    width: 85%;
+}
+.sliders>div>div.ui-widget.ui-widget-content{
+    border:0;
+    height: 6px;
+    /*width: 80%;*/
+    margin: 0em auto;
+    background: #eceff4;
+}
+.sliders>div>div>span.ui-slider-handle{
+    border-radius: 50%;
+    background: none;
+    border: 2px solid white;
+    top: -7px;
+}
+.volume .buttons,
+#slider-volume>div,
+#slider-volume>span.ui-slider-handle{
+    background: none;
+    background-color:#59c2a9;
+}
+#slider-volume>div.slider-holder{
+    background: linear-gradient(to right, #59c2a9, #59c2a9 8%, white 8%, white );
+}
+.pays .buttons,
+#slider-pays>div,
+#slider-pays>span.ui-slider-handle{
+    background: none;
+    background-color:#ed5464;
+}
+#slider-pays>div.slider-holder{
+    background: linear-gradient(to right, #ed5464, #ed5464 8%, white 8%, white );
+}
+.risks .buttons,
+#slider-risks>div,
+#slider-risks>span.ui-slider-handle{
+    background: none;
+    background-color:#f6bb41;
+}
+#slider-risks>div.slider-holder{
+    background: linear-gradient(to right, #f6bb41, #f6bb41 8%, white 8%, white );
+}
+.slider{
+    padding: 0.75em 15%;
+    position: relative;
+    background: linear-gradient(to right, transparent 0%, transparent 15%,
+                    white 14.75%, white 15.25%, transparent 15.25%, transparent 28.75%,
+                    white 28.75%, white 29.25%, transparent 29.25%, transparent 42.75%,
+                    white 42.75%, white 43.25%, transparent 43.25%, transparent 56.75%,
+                    white 56.75%, white 57.25%, transparent 57.25%, transparent 70.75%,
+                    white 70.75%, white 71.25%, transparent 71.25%, transparent 84.75%,
+                    white 84.75%, white 85.25%, transparent 85.25%, transparent 100%
+    )
+}
+.slider>.buttons{
+    display: block;
+    position: absolute;
+    top: 0.3em;
+    color: #fff;
+    border-radius: 50%;
+    width: 1.25em;
+    height: 1.25em;
+    font-weight: bold;
+    padding-bottom: 0.2em;
+    text-align: center;
+    font-size: 1.25em;
+    line-height: 1.25em;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.slider>.buttons.left{
+    left:-10px;
+}
+.slider>.buttons.right{
+    right: -10px;
+}
+.pm_value{
+    width: 7em!important;
+    height: 7em;
+    position: relative;
+
+}
+.plus .content{
+    position: absolute;
+    top: calc(50% - 0.45em);
+    left: calc(50% - 0.25em);
+    bottom: 0;
+    right: 0;
+}
+.plus{
+    width: 1em;
+    padding-top: 1em;
+    position: relative;
+    border-radius: 50%;
+    font-size: 2em;
+    background-color: #ea6d28;
+    color: white;
+    float: left;
+    height: 0;
+}
+.progress{
+    width: 75%;
+    height: 5px;
+    margin-left: 20%;
+    float: right;
+}
+.leverage{
+    width: 75%;
+    margin-left: 3%;
+    float: right;
+}
+.pmd h6{
+    text-transform: uppercase;
+}
+.pm_value .text{
+
+    width: 100%;
+    text-align: center;
+    top: calc(50% - 0.5em);
+    position: absolute;
+}
+.ui-slider .slider-holder{
+    background-color: white!important;
+    position: absolute;
+    right: -8%;
+    width: 116%;
+    height: 6px;
+    border-radius: 4px;
+}
+.pmd>div{
+    max-width: 20em;
+}
+.zoom-button{
+    left: calc(50% - 3em);
+    transform: none;
+    right: initial;
+    bottom: 20px;
+}
+#helpers > .round {
+    margin: 0 1em;
+}
+.page-content{
+    overflow: auto;
+}
+h5,
+#filters,
+#bordered_start,
+#bordered_start ul,
+.sidebar,
+.col,
+#helpers ,
+.slider,
+.sliders,
+.slider div{
+    overflow: visible;
+}
+#start-filters>div{
+    padding:1em;
+}
+#start-card h4:after{
+    bottom:-5px;
+}
+.popup .round {
+    width: 27px;
+    height: 27px;
+    font-size: 14px;
+    padding-left: 9px;
+    margin-top: -2px;
+}
+.popup .message{
+     display: none;
+ }
+.popup:hover .message{
+    display: block;
+}
+#dashboard-card .col-4 .card-container{
+    padding: 0 .75vw;
+}
+@media (max-width: 1024px){
+    .zoom-button.button{
+        left: 0;
+    }
+}
+@media (min-width: 1400px){
+    .zoom-button{
+        bottom:25px;
+    }
+}
+#start-card .card-container .around>div{
+    border:none;
+
+}
+.relative{
+    position: relative;
+}
+.absolute{
+    position: absolute;
+}
+.absolute.filter_image{
+    background-size: contain;
+    background-image: url('../../img/bg.png');
+    height: 57%;
+    width: inherit;
+    background-repeat: no-repeat;
+    bottom: calc(2em + 17%);
+}
+.absolute.bordered{
+    width: 4em;
+    height: 4em;
+    background-size: contain;
+}
+.absolute.bordered.second,
+.absolute.bordered.third{
+    left: 3.5vw;
+    top: -2em;
+}
+.absolute.bordered.fourth,
+.absolute.bordered.fifth{
+    left: 3.5vw;
+    top: -4em;
+}
+.absolute.bordered.start{
+    left: -2em;
+    top: 0em;
+    background-image: url('../../img/steps/1_active.png');
+}
+.absolute.bordered.second{
+    background-image: url('../../img/steps/2.png');
+}
+.absolute.bordered.third{
+    background-image: url('../../img/steps/3.png');
+}
+.absolute.bordered.fourth{
+    background-image: url('../../img/steps/4.png');
+}
+.absolute.bordered.fifth{
+    background-image: url('../../img/steps/5.png');
+}
+.absolute.bordered.second.touched{
+    background-image: url('/img/steps/2_active.png');
+}
+.absolute.bordered.third.touched{
+    background-image: url('/img/steps/3_active.png');
+}
+.absolute.bordered.fourth.touched{
+    background-image: url('/img/steps/4_active.png');
+}
+.absolute.bordered.fifth.touched{
+    background-image: url('/img/steps/5_active.png');
+}
+#start-card .card-container #bordered_start{
+    padding-left: 10%;
+    border-left:2px solid #ea6d28;
+    border-bottom:2px solid #ea6d28;
+    border-bottom-left-radius: 4vw;
+}
+#start-card .card-container .col.col-6{
+    padding-top: 2em;
+}
+
+#start-card .card-container #bordered_second>.col-9,
+#start-card .card-container #bordered_second>.col-1{
+    border-bottom:2px solid #ea6d28;
+    padding-bottom: 2em;
+    /*margin-top: -2px;*/
+}
+#start-card .card-container #bordered_third{
+    /*margin-top: -2px;*/
+    border-top:2px solid #ea6d28;
+    border-right:2px solid #ea6d28;
+    border-bottom:2px solid #ea6d28;
+    border-radius: 0 4vw 4vw 0;
+
+}
+#two>div{
+    padding-top: 2em;
+}
+
+#three{
+    padding-top:2em;
+    padding-bottom: 2em;
+}
+#bordered_start ul{
+    margin: 0;
+    margin-bottom:2em;
+
+}
+#bordered_start ul li {
+    padding-left: 2em;
+    overflow: visible;
+}
+#bordered_start ul>:first-child span,
+#bordered_start ul>:nth-child(2) span,
+#bordered_start ul>:nth-child(3) span{
+    width: 2em;
+    height: 2em;
+    background-size: contain;
+    left: calc(-1em - 2px);
+    position: absolute;
+}
+#bordered_start ul>:first-child span{
+    background-image: url('../../img/bg_a.png');
+}
+#bordered_start ul>:nth-child(2) span{
+    background-image: url('../../img/bg_b.png');
+}
+#bordered_start ul>:nth-child(3) span{
+    background-image: url('../../img/bg_c.png');
+}
+#bordered_start ul>:first-child,
+#bordered_start ul>:nth-child(2){
+    border-left:3px solid #ea6d28;
+    margin-left: -3px;
+}
+#pmdetails{
+    margin-top: 1em;
+}
+@media (max-width: 1400px){
+    .sidebar span.small{
+        font-size:11px!important;
+    }
+    #kontakten-card form label.upper,
+
+    #portfolio-senden-card form label.upper{
+        font-size: 12px;
+    }
+    #kontakten-card form input[type="text"] ,
+    #portfolio-senden-card form input[type="text"] {
+        font-size: 10px;
+        line-height: 3em;
+        }
+    button, .button{
+        font-size: 13px;
+    }
+    #start-card .smaller{
+        font-size:51%!important;
+    }
+    #start-card .col-6 p{
+        line-height: 1.75em;
+    }
+
+    #portfolio-lernen-card th,
+    #portfolio-lernen-card td {
+        padding: 0.5em;
+    }
+    .pm .col.col-11.row button{
+        line-height: 1.4em!important;
+        padding: 1em;
+    }
+}
+
+.ui-slider-handle.ui-corner-all.ui-state-default{
+    border-radius: 50%;
+}
+.ui-slider-horizontal{
+    height: 0.4em;
+}

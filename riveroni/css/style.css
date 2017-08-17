@@ -1,8 +1,9 @@
 body{
     margin: 0;
     overflow: hidden;
-    font-family: 'Julius Sans One', sans-serif;
-    /*font-family: 'Syncopate', sans-serif;*/
+    /*font-family: 'Julius Sans One', sans-serif;*/
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 100;
 }
 #video-background {
     position: fixed;
@@ -35,8 +36,8 @@ footer{
     font-family: 'Roboto', sans-serif;
     text-transform: lowercase;
     position: fixed;
-    background-color: rgba(255, 255, 255, 0.5);
-    color: #333333;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
     height: 2vh;
     text-align: center;
     padding: 2% 0;
@@ -44,8 +45,12 @@ footer{
     left: 0;
     width: 100vw;
 }
+footer span{
+    float: left;
+    margin-left: 17%;
+}
 a, a:hover, a:visited{
-    color: #333333;
+    color: #ffffff;
 }
 
 h1 {
@@ -54,6 +59,7 @@ h1 {
     -ms-animation: fadein 7s; /* Internet Explorer */
     -o-animation: fadein 7s; /* Opera < 12.1 */
     animation: fadein 7s;
+    font-weight: 100;
 }
 
 h3 {
@@ -62,6 +68,7 @@ h3 {
     -ms-animation: fadein 12s; /* Internet Explorer */
     -o-animation: fadein 12s; /* Opera < 12.1 */
     animation: fadein 12s;
+
 }
 
 

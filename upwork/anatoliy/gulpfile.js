@@ -1,9 +1,10 @@
-const gulp = require('gulp');
-const sass = require('gulp-sass');
-const concat = require('gulp-concat');
-const uglify = require('gulp-uglify');
-const rename = require('gulp-rename');
-const minify = require('gulp-clean-css');
+var gulp = require('gulp');
+var sass = require('gulp-sass');
+var concat = require('gulp-concat');
+var uglify = require('gulp-uglify');
+var rename = require('gulp-rename');
+var minify = require('gulp-clean-css');
+var babel = require("gulp-babel");
 
 const scripts = [
 	"src/_js/Core/Kube.js",
@@ -20,9 +21,9 @@ const scripts = [
 	"src/_js/Collapse/Kube.Collapse.js",
 	"src/_js/Dropdown/Kube.Dropdown.js",
 	"src/_js/Tabs/Kube.Tabs.js",
-	"src/_js/Modal/Kube.Modal.js"
+	"src/_js/Modal/Kube.Modal.js",
+	"src/_js/*.js"
 ];
-
 gulp.task('sass', function() {
     return gulp.src('src/kube.scss')
         .pipe(sass())
@@ -50,6 +51,7 @@ gulp.task('combine', function() {
 
 gulp.task('scripts', function() {
     return gulp.src(scripts)
+        .pipe(babel())
         .pipe(concat('kube.js'))
         .pipe(gulp.dest('dist/js'))
         .pipe(rename('kube.min.js'))

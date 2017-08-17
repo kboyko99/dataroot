@@ -4,8 +4,7 @@ body {
 }
 
 #container {
-    width: 640px;
-    height: 400px;
+    width: 75%;
 }
 canvas{
     margin: 1em;

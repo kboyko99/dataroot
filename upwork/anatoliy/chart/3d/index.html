@@ -30,6 +30,9 @@
     <h3>FOV</h3>
     <div id="camera-fov"></div>
     <input type="text" id="amount-fov" readonly style="border:0; color:#f6931f; font-weight:bold;">
+    <h3>position</h3>
+    <div id="camera-pos"></div>
+    <input type="text" id="amount-pos" readonly style="border:0; color:#f6931f; font-weight:bold;">
 </div>
 <script>
     var unfiltered = {
@@ -139,6 +142,22 @@
             }
         });
         $("#amount-fov").val($("#camera-fov").slider("value"));
+    });
+    $(function () {
+        $("#camera-pos").slider({
+            range: "min",
+            min: 4,
+            max: 20,
+            value: 11,
+            slide: function (event, ui) {
+                $("#amount-pos").val(ui.value);
+                camera.position.x = ui.value;
+                camera.position.z = ui.value + 1;
+                camera.updateProjectionMatrix();
+                animate();
+            }
+        });
+        $("#amount-pos").val($("#camera-pos").slider("value"));
     });
 
     function addAmbLight() {
@@ -267,8 +286,8 @@
     var renderer = new THREE.WebGLRenderer({
         antialias: true
     });
-    var w = 600;
-    var h = 400;
+    var w = 1200;
+    var h = 800;
     renderer.setSize(w, h);
     renderer.shadowMap.enabled = true;
     renderer.shadowMap.type = THREE.PCFSoftShadowMap;

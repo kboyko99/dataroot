@@ -67,14 +67,14 @@ button:hover,
 
 // Outline
 .button.outline {
-    background: none;
+    background: white;
     border: none;
     color: $color-button-primary;
     -webkit-box-shadow: 10px 10px 40px -5px rgba(0,0,0,0.4);
     -moz-box-shadow: 10px 10px 40px -5px rgba(0,0,0,0.4);
     box-shadow: 10px 10px 40px -5px rgba(0,0,0,0.4);
     &:hover {
-        background: none;
+        background: white;
         color: rgba($color-button-primary, .6);
         border-color: rgba($color-button-primary, .5);
     }
